@@ -1,0 +1,1065 @@
+{
+  "timestamp": "2026-07-12_1214",
+  "ablated": [
+    "slm"
+  ],
+  "overall_accuracy": 0.7606,
+  "total_queries": 330,
+  "correct": 251,
+  "per_intent": {
+    "acc_check_balance": {
+      "accuracy": 0.6667,
+      "total": 15,
+      "correct": 10,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 162.9,
+      "avg_confidence": 0.909,
+      "confusions": {
+        "acc_cif_number": 1,
+        "sec_login_history": 1,
+        "acc_branch_details": 1,
+        "pay_transfer_status": 1,
+        "acc_explore": 1
+      }
+    },
+    "acc_mini_statement": {
+      "accuracy": 0.6,
+      "total": 15,
+      "correct": 9,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.0,
+      "avg_latency_ms": 73.7,
+      "avg_confidence": 0.895,
+      "confusions": {
+        "acc_download_statement": 1,
+        "pay_transfer_status": 1,
+        "acc_explore": 1,
+        "upi_history": 1,
+        "pay_payment_history": 1,
+        "st_continuation": 1
+      }
+    },
+    "acc_close_account": {
+      "accuracy": 0.8,
+      "total": 15,
+      "correct": 12,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 68.2,
+      "avg_confidence": 0.8839,
+      "confusions": {
+        "st_continuation": 1,
+        "sec_freeze_account": 1,
+        "pay_failed_transaction": 1
+      }
+    },
+    "cc_block_card": {
+      "accuracy": 0.9333,
+      "total": 15,
+      "correct": 14,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 1.0,
+      "avg_latency_ms": 77.1,
+      "avg_confidence": 0.8529,
+      "confusions": {
+        "dc_block_card": 1
+      }
+    },
+    "cc_unblock_card": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 79.0,
+      "avg_confidence": 0.8445,
+      "confusions": {
+        "dc_unblock_card": 1,
+        "cc_replace_card": 1,
+        "cc_activate_card": 1,
+        "dc_set_international": 1
+      }
+    },
+    "cc_view_statement": {
+      "accuracy": 0.6667,
+      "total": 15,
+      "correct": 10,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 79.7,
+      "avg_confidence": 0.8965,
+      "confusions": {
+        "cc_pay_bill": 1,
+        "cc_application_status": 1,
+        "cc_check_limit": 1,
+        "cc_explore": 1,
+        "cc_minimum_due": 1
+      }
+    },
+    "cc_pay_bill": {
+      "accuracy": 0.6667,
+      "total": 15,
+      "correct": 10,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 78.4,
+      "avg_confidence": 0.8429,
+      "confusions": {
+        "cc_total_outstanding": 3,
+        "cc_view_statement": 1,
+        "cc_unblock_card": 1
+      }
+    },
+    "cc_limit_increase": {
+      "accuracy": 0.6,
+      "total": 15,
+      "correct": 9,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 81.8,
+      "avg_confidence": 0.8534,
+      "confusions": {
+        "dc_change_limit": 1,
+        "cc_limit_decrease": 2,
+        "dc_replace_card": 1,
+        "cc_pay_bill": 1,
+        "dc_check_limit": 1
+      }
+    },
+    "dc_block_card": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 75.0,
+      "avg_confidence": 0.8817,
+      "confusions": {
+        "sec_report_fraud": 1,
+        "dc_activate_card": 1
+      }
+    },
+    "dc_replace_card": {
+      "accuracy": 0.6,
+      "total": 15,
+      "correct": 9,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.0,
+      "avg_latency_ms": 83.4,
+      "avg_confidence": 0.8979,
+      "confusions": {
+        "dc_apply_new": 1,
+        "dc_activate_card": 1,
+        "dc_card_details": 1,
+        "cc_replace_card": 2,
+        "dc_explore": 1
+      }
+    },
+    "dc_reset_pin": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 75.6,
+      "avg_confidence": 0.7933,
+      "confusions": {
+        "cc_view_statement": 1,
+        "sec_change_password": 1
+      }
+    },
+    "loan_emi_details": {
+      "accuracy": 0.4,
+      "total": 15,
+      "correct": 6,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.2857,
+      "adversarial_accuracy": 0.2,
+      "avg_latency_ms": 71.1,
+      "avg_confidence": 0.8772,
+      "confusions": {
+        "loan_outstanding": 1,
+        "loan_overdue_check": 1,
+        "pay_transfer_limit": 2,
+        "loan_next_emi_date": 2,
+        "loan_repayment_schedule": 2,
+        "pay_recurring_transfer": 1
+      }
+    },
+    "loan_outstanding": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 70.8,
+      "avg_confidence": 0.9242,
+      "confusions": {
+        "loan_repayment_schedule": 2
+      }
+    },
+    "loan_foreclosure": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.2,
+      "avg_latency_ms": 67.6,
+      "avg_confidence": 0.8166,
+      "confusions": {
+        "acc_interest_rate": 1,
+        "pay_transfer_status": 1,
+        "sec_logout_all": 1,
+        "st_help": 1
+      }
+    },
+    "pay_transfer": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 68.6,
+      "avg_confidence": 0.7022,
+      "confusions": {
+        "pay_recurring_transfer": 1,
+        "sec_report_fraud": 1
+      }
+    },
+    "upi_send": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 71.0,
+      "avg_confidence": 0.7813,
+      "confusions": {
+        "upi_request": 2,
+        "pay_transfer": 1,
+        "cc_set_online": 1
+      }
+    },
+    "sec_report_fraud": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 80.7,
+      "avg_confidence": 0.7635,
+      "confusions": {
+        "sec_report_phishing": 1,
+        "acc_deposit_money": 1,
+        "sec_reset_password": 1,
+        "loan_payment_complaint": 1
+      }
+    },
+    "loan_explore": {
+      "accuracy": 0.9333,
+      "total": 15,
+      "correct": 14,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 75.2,
+      "avg_confidence": 0.9205,
+      "confusions": {
+        "loan_insurance": 1
+      }
+    },
+    "acc_explore": {
+      "accuracy": 0.8,
+      "total": 15,
+      "correct": 12,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 74.3,
+      "avg_confidence": 0.8893,
+      "confusions": {
+        "st_continuation": 1,
+        "pay_list_beneficiaries": 1,
+        "acc_detailed_statement": 1
+      }
+    },
+    "dc_explore": {
+      "accuracy": 1.0,
+      "total": 15,
+      "correct": 15,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 1.0,
+      "avg_latency_ms": 76.7,
+      "avg_confidence": 0.9374,
+      "confusions": {}
+    },
+    "cc_explore": {
+      "accuracy": 0.9333,
+      "total": 15,
+      "correct": 14,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 79.0,
+      "avg_confidence": 0.913,
+      "confusions": {
+        "cc_block_card": 1
+      }
+    },
+    "st_continuation": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 68.6,
+      "avg_confidence": 0.8839,
+      "confusions": {
+        "acc_explore": 3,
+        "acc_check_balance": 1
+      }
+    }
+  },
+  "tier_accuracy": {
+    "clean": 0.9242,
+    "messy": 0.8442,
+    "adversarial": 0.5455
+  },
+  "oos_accuracy": null,
+  "latency": {
+    "avg_ms": 79.0,
+    "p50_ms": 75.4
+  },
+  "failures": [
+    {
+      "query": "paiso ka hisab btao zra",
+      "expected": "acc_check_balance",
+      "got": "acc_cif_number",
+      "confidence": 0.7677,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "accnt me kitna pada h abhi",
+      "expected": "acc_check_balance",
+      "got": "sec_login_history",
+      "confidence": 0.8138,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mere pas kitne h",
+      "expected": "acc_check_balance",
+      "got": "acc_branch_details",
+      "confidence": 0.8425,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "No banking keyword — 'kitne h' is ambiguous"
+    },
+    {
+      "query": "pese h ya nhi",
+      "expected": "acc_check_balance",
+      "got": "pay_transfer_status",
+      "confidence": 0.864,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Y/N framing, no explicit balance word"
+    },
+    {
+      "query": "account me kya scene h",
+      "expected": "acc_check_balance",
+      "got": "acc_explore",
+      "confidence": 0.8451,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Slang — 'kya scene h' is very vague"
+    },
+    {
+      "query": "statemnt chahiye chota wala",
+      "expected": "acc_mini_statement",
+      "got": "acc_download_statement",
+      "confidence": 0.9132,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "kya hua mera paisa",
+      "expected": "acc_mini_statement",
+      "got": "pay_transfer_status",
+      "confidence": 0.8134,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Could be balance or mini statement — 'kya hua' implies transaction"
+    },
+    {
+      "query": "hisab dikhao",
+      "expected": "acc_mini_statement",
+      "got": "acc_explore",
+      "confidence": 0.9056,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Very short — 'hisab' could mean balance or statement"
+    },
+    {
+      "query": "pichle hafte kya kya kata",
+      "expected": "acc_mini_statement",
+      "got": "upi_history",
+      "confidence": 0.7546,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Colloquial — 'kata' = deducted, implies transaction list"
+    },
+    {
+      "query": "recent wala dikhao",
+      "expected": "acc_mini_statement",
+      "got": "pay_payment_history",
+      "confidence": 0.8593,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "No banking keyword at all"
+    },
+    {
+      "query": "paiso ka lena dena dikhao",
+      "expected": "acc_mini_statement",
+      "got": "st_continuation",
+      "confidence": 0.7914,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Colloquial — 'lena dena' = transactions"
+    },
+    {
+      "query": "sab khatam karo mera",
+      "expected": "acc_close_account",
+      "got": "st_continuation",
+      "confidence": 0.7884,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Very vague — 'sab khatam' could mean anything"
+    },
+    {
+      "query": "band karo sab kuch",
+      "expected": "acc_close_account",
+      "got": "sec_freeze_account",
+      "confidence": 0.7816,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Ambiguous — could be card block or account close"
+    },
+    {
+      "query": "chhod raha hu bank",
+      "expected": "acc_close_account",
+      "got": "pay_failed_transaction",
+      "confidence": 0.7779,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Slang — 'leaving the bank' implies closure"
+    },
+    {
+      "query": "mera crd card chori ho gya block karo",
+      "expected": "cc_block_card",
+      "got": "dc_block_card",
+      "confidence": 0.8163,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mera cc block h usko kholo",
+      "expected": "cc_unblock_card",
+      "got": "dc_unblock_card",
+      "confidence": 0.8009,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mera cc kaam nahi kr rha chalu karo",
+      "expected": "cc_unblock_card",
+      "got": "cc_replace_card",
+      "confidence": 0.7843,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Could be unblock or technical issue"
+    },
+    {
+      "query": "dobara activate karo credit card",
+      "expected": "cc_unblock_card",
+      "got": "cc_activate_card",
+      "confidence": 0.8694,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Could confuse with cc_activate_card (new card activation)"
+    },
+    {
+      "query": "cc chalana h wapas",
+      "expected": "cc_unblock_card",
+      "got": "dc_set_international",
+      "confidence": 0.6201,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'chalana' = operate/run, very colloquial"
+    },
+    {
+      "query": "cc ka bill btao is month ka",
+      "expected": "cc_view_statement",
+      "got": "cc_pay_bill",
+      "confidence": 0.793,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "cc ka hisab btao kitna kata",
+      "expected": "cc_view_statement",
+      "got": "cc_application_status",
+      "confidence": 0.7881,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "cc pe kya kya laga hai",
+      "expected": "cc_view_statement",
+      "got": "cc_check_limit",
+      "confidence": 0.7497,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Colloquial — 'kya laga hai' = what charges"
+    },
+    {
+      "query": "credit card ka lena dena btao",
+      "expected": "cc_view_statement",
+      "got": "cc_explore",
+      "confidence": 0.9297,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'lena dena' = transactions, vague"
+    },
+    {
+      "query": "is mahine cc pe kitna gaya",
+      "expected": "cc_view_statement",
+      "got": "cc_minimum_due",
+      "confidence": 0.9083,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'kitna gaya' = how much spent, no statement keyword"
+    },
+    {
+      "query": "credit card ka outstanding bharo",
+      "expected": "cc_pay_bill",
+      "got": "cc_total_outstanding",
+      "confidence": 0.9564,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "cc ka bill de do mera",
+      "expected": "cc_pay_bill",
+      "got": "cc_view_statement",
+      "confidence": 0.9542,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "cc pe jo baki h wo de do",
+      "expected": "cc_pay_bill",
+      "got": "cc_total_outstanding",
+      "confidence": 0.9326,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'baki' = remaining, implies outstanding"
+    },
+    {
+      "query": "credit card ka karza utaaro",
+      "expected": "cc_pay_bill",
+      "got": "cc_total_outstanding",
+      "confidence": 0.9552,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'karza utaaro' = repay debt, very colloquial"
+    },
+    {
+      "query": "cc zero karo mera",
+      "expected": "cc_pay_bill",
+      "got": "cc_unblock_card",
+      "confidence": 0.8539,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Slang — 'zero karo' = clear the balance"
+    },
+    {
+      "query": "Please raise my credit card spending limit",
+      "expected": "cc_limit_increase",
+      "got": "dc_change_limit",
+      "confidence": 0.8136,
+      "tier": "clean",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "cc ka limit zyada karo",
+      "expected": "cc_limit_increase",
+      "got": "cc_limit_decrease",
+      "confidence": 0.904,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "credit card pe aur limit chahiye",
+      "expected": "cc_limit_increase",
+      "got": "cc_limit_decrease",
+      "confidence": 0.9025,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "credit card chhota pad rha h",
+      "expected": "cc_limit_increase",
+      "got": "dc_replace_card",
+      "confidence": 0.6876,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'chhota pad rha' = falling short, implies limit increase"
+    },
+    {
+      "query": "mera cc se bada payment nahi ho rha",
+      "expected": "cc_limit_increase",
+      "got": "cc_pay_bill",
+      "confidence": 0.7145,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Complaint framing that implies limit increase need"
+    },
+    {
+      "query": "zyada shopping krni h cc pe allow karo",
+      "expected": "cc_limit_increase",
+      "got": "dc_check_limit",
+      "confidence": 0.722,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'allow karo' = very indirect limit increase"
+    },
+    {
+      "query": "mera bank ka card kho gya jo atm me daalte h",
+      "expected": "dc_block_card",
+      "got": "sec_report_fraud",
+      "confidence": 0.7737,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Long description of debit card without using the word"
+    },
+    {
+      "query": "debit card safe nahi h ab",
+      "expected": "dc_block_card",
+      "got": "dc_activate_card",
+      "confidence": 0.8242,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Safety concern, no explicit block request"
+    },
+    {
+      "query": "naya debit card chahiye mujhe",
+      "expected": "dc_replace_card",
+      "got": "dc_apply_new",
+      "confidence": 0.9509,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mera atm card kaam nhi kr rha naya dedo",
+      "expected": "dc_replace_card",
+      "got": "dc_activate_card",
+      "confidence": 0.9719,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'kaam nahi kar raha' could be tech issue or physical damage"
+    },
+    {
+      "query": "debit card expire ho gya ab kya",
+      "expected": "dc_replace_card",
+      "got": "dc_card_details",
+      "confidence": 0.9662,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Expired card — implies replacement but doesn't say it"
+    },
+    {
+      "query": "purana card chhodo naya do",
+      "expected": "dc_replace_card",
+      "got": "cc_replace_card",
+      "confidence": 0.8562,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'chhodo' = forget it, very colloquial"
+    },
+    {
+      "query": "atm me dalne wala card toot gya h",
+      "expected": "dc_replace_card",
+      "got": "dc_explore",
+      "confidence": 0.9254,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Describes the card by its ATM usage"
+    },
+    {
+      "query": "mera card ghis gya naya bhejo",
+      "expected": "dc_replace_card",
+      "got": "cc_replace_card",
+      "confidence": 0.834,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'ghis gya' = worn out, colloquial"
+    },
+    {
+      "query": "4 digit wala code bhool gya card ka",
+      "expected": "dc_reset_pin",
+      "got": "cc_view_statement",
+      "confidence": 0.743,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'4 digit code' describes PIN without saying it"
+    },
+    {
+      "query": "card ka password change krna h",
+      "expected": "dc_reset_pin",
+      "got": "sec_change_password",
+      "confidence": 0.7138,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'password' instead of PIN"
+    },
+    {
+      "query": "mra loan ka emi kitna bnta h",
+      "expected": "loan_emi_details",
+      "got": "loan_outstanding",
+      "confidence": 0.9305,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "emi ka amount btao next wala",
+      "expected": "loan_emi_details",
+      "got": "loan_overdue_check",
+      "confidence": 0.8052,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "loan ki kist kitni h meri",
+      "expected": "loan_emi_details",
+      "got": "pay_transfer_limit",
+      "confidence": 0.827,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mahine ka emi kitna h mera",
+      "expected": "loan_emi_details",
+      "got": "loan_next_emi_date",
+      "confidence": 0.8917,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "meri emi kitni aati h har mahine",
+      "expected": "loan_emi_details",
+      "got": "loan_repayment_schedule",
+      "confidence": 0.9019,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "har mahine kitna dena padta h",
+      "expected": "loan_emi_details",
+      "got": "loan_repayment_schedule",
+      "confidence": 0.8402,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'kitna dena padta' = how much to pay, no EMI/loan keyword"
+    },
+    {
+      "query": "kist kitni h meri",
+      "expected": "loan_emi_details",
+      "got": "pay_transfer_limit",
+      "confidence": 0.8511,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'kist' = installment, very short"
+    },
+    {
+      "query": "loan ka bojh kitna h mahine ka",
+      "expected": "loan_emi_details",
+      "got": "pay_recurring_transfer",
+      "confidence": 0.6946,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'bojh' = burden, colloquial"
+    },
+    {
+      "query": "next payment kitna aayega",
+      "expected": "loan_emi_details",
+      "got": "loan_next_emi_date",
+      "confidence": 0.8191,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Vague — could be CC bill or loan EMI"
+    },
+    {
+      "query": "bank ko kitna dena h abhi",
+      "expected": "loan_outstanding",
+      "got": "loan_repayment_schedule",
+      "confidence": 0.8746,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Very general — could be loan or CC"
+    },
+    {
+      "query": "loan kab khatam hoga kitna bcha",
+      "expected": "loan_outstanding",
+      "got": "loan_repayment_schedule",
+      "confidence": 0.8732,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Two questions in one — tenure + outstanding"
+    },
+    {
+      "query": "sab ek saath de deta hu khatam karo",
+      "expected": "loan_foreclosure",
+      "got": "acc_interest_rate",
+      "confidence": 0.8096,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'sab ek saath' = everything at once, no loan keyword"
+    },
+    {
+      "query": "poora karza nipta do aaj hi",
+      "expected": "loan_foreclosure",
+      "got": "pay_transfer_status",
+      "confidence": 0.7958,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'karza nipta do' = settle all debt"
+    },
+    {
+      "query": "loan ka scene khatam karo",
+      "expected": "loan_foreclosure",
+      "got": "sec_logout_all",
+      "confidence": 0.6784,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Slang — 'scene khatam karo'"
+    },
+    {
+      "query": "bank ka sab hisab saaf karo loan wala",
+      "expected": "loan_foreclosure",
+      "got": "st_help",
+      "confidence": 0.7597,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'hisab saaf karo' = clear all accounts"
+    },
+    {
+      "query": "amir ko 2000 trf krdo abhi",
+      "expected": "pay_transfer",
+      "got": "pay_recurring_transfer",
+      "confidence": 0.6217,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "dusre account me daal do 5000",
+      "expected": "pay_transfer",
+      "got": "sec_report_fraud",
+      "confidence": 0.6385,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'daal do' = put, indirect transfer"
+    },
+    {
+      "query": "Send 500 via UPI",
+      "expected": "upi_send",
+      "got": "upi_request",
+      "confidence": 0.9605,
+      "tier": "clean",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "upi payment karo 500 amit ko",
+      "expected": "upi_send",
+      "got": "upi_request",
+      "confidence": 0.9439,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "upay se bhej do 300 rs",
+      "expected": "upi_send",
+      "got": "pay_transfer",
+      "confidence": 0.7126,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "online payment karo 800 amit ko phone se",
+      "expected": "upi_send",
+      "got": "cc_set_online",
+      "confidence": 0.7249,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'online payment phone se' — could be UPI or net banking"
+    },
+    {
+      "query": "I want to report a fraud on my account",
+      "expected": "sec_report_fraud",
+      "got": "sec_report_phishing",
+      "confidence": 0.7947,
+      "tier": "clean",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mera paise kisi ne chura liye account se",
+      "expected": "sec_report_fraud",
+      "got": "acc_deposit_money",
+      "confidence": 0.8038,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mujhe lagta h kisi ne mere account me haath daala",
+      "expected": "sec_report_fraud",
+      "got": "sec_reset_password",
+      "confidence": 0.6981,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Idiom — 'haath daala' = meddled"
+    },
+    {
+      "query": "account me gadbad h paise kam ho gye bina kuch kiye",
+      "expected": "sec_report_fraud",
+      "got": "loan_payment_complaint",
+      "confidence": 0.7259,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'gadbad' = something wrong, describes fraud scenario"
+    },
+    {
+      "query": "loan me kya kya kr skte h",
+      "expected": "loan_explore",
+      "got": "loan_insurance",
+      "confidence": 0.9203,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Exploring options — not a specific action"
+    },
+    {
+      "query": "Show me my account details",
+      "expected": "acc_explore",
+      "got": "st_continuation",
+      "confidence": 0.8956,
+      "tier": "clean",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mera savings account dikhao",
+      "expected": "acc_explore",
+      "got": "pay_list_beneficiaries",
+      "confidence": 0.8931,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mera khata dikhao pura",
+      "expected": "acc_explore",
+      "got": "acc_detailed_statement",
+      "confidence": 0.8947,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'khata dikhao pura' = show full account"
+    },
+    {
+      "query": "mera plastic card btao credit wala",
+      "expected": "cc_explore",
+      "got": "cc_block_card",
+      "confidence": 0.7464,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'plastic card' — unusual phrasing for explore"
+    },
+    {
+      "query": "Show me more options",
+      "expected": "st_continuation",
+      "got": "acc_explore",
+      "confidence": 0.8454,
+      "tier": "clean",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "aur bta do kuch",
+      "expected": "st_continuation",
+      "got": "acc_explore",
+      "confidence": 0.8979,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "aur info do plz",
+      "expected": "st_continuation",
+      "got": "acc_explore",
+      "confidence": 0.9162,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "aur dikhao kya kya kr sakte",
+      "expected": "st_continuation",
+      "got": "acc_check_balance",
+      "confidence": 0.8476,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Continuation + capability question"
+    }
+  ]
+}

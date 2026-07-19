@@ -1,0 +1,39 @@
+tier,query,gold_raw,gold_adjudicated,verdict,notes
+adversarial,4 digit wala code bhool gya card ka,dc_reset_pin,dc_reset_pin,gold_ok,'4 digit code' describes PIN without saying it
+clean,Show my debit card details,dc_explore,dc_card_details,gold_wrong,
+adversarial,account me kya scene h,acc_check_balance,acc_check_balance,gold_ok,Slang ‚Äî 'kya scene h' is very vague
+messy,aur kya kya hai,st_continuation,st_continuation,gold_ok,
+adversarial,baaki kya hai,st_continuation,st_continuation,gold_ok,'baaki' = remaining ‚Äî implies more exists
+adversarial,bank ka sab hisab saaf karo loan wala,loan_foreclosure,loan_foreclosure,gold_ok,'hisab saaf karo' = clear all accounts
+adversarial,card band tha ab kholo,cc_unblock_card,cc_unblock_card,gold_ok,No 'unblock' keyword ‚Äî 'kholo' = open
+adversarial,cc chalana h wapas,cc_unblock_card,cc_unblock_card,gold_ok,"'chalana' = operate/run, very colloquial"
+messy,cc ka bill de do mera,cc_pay_bill,cc_pay_bill,gold_ok,
+messy,cc ka hisab btao kitna kata,cc_view_statement,cc_view_statement,gold_ok,
+adversarial,cc pe kya kya laga hai,cc_view_statement,cc_view_statement,gold_ok,Colloquial ‚Äî 'kya laga hai' = what charges
+adversarial,chhod raha hu bank,acc_close_account,acc_close_account,gold_ok,Slang ‚Äî 'leaving the bank' implies closure
+adversarial,credit card chhota pad rha h,cc_limit_increase,cc_limit_increase,gold_ok,"'chhota pad rha' = falling short, implies limit increase"
+adversarial,credit card ka lena dena btao,cc_view_statement,cc_view_statement,gold_ok,"'lena dena' = transactions, vague"
+adversarial,dobara activate karo credit card,cc_unblock_card,cc_unblock_card,gold_ok,Could confuse with cc_activate_card (new card activation)
+adversarial,kitna bacha mera,acc_check_balance,acc_check_balance,gold_ok,"Very short, no account/balance keyword"
+adversarial,loan ka bojh kitna h mahine ka,loan_emi_details,loan_emi_details,gold_ok,"'bojh' = burden, colloquial"
+adversarial,loan ka scene khatam karo,loan_foreclosure,loan_foreclosure,gold_ok,Slang ‚Äî 'scene khatam karo'
+adversarial,loan kab khatam hoga kitna bcha,loan_outstanding,loan_outstanding,gold_ok,Two questions in one ‚Äî tenure + outstanding
+messy,loan ki kist kitni h meri,loan_emi_details,loan_emi_details,gold_ok,
+adversarial,mera atm card kaam nhi kr rha naya dedo,dc_replace_card,dc_replace_card,gold_ok,'kaam nahi kar raha' could be tech issue or physical damage
+adversarial,mera card ghis gya naya bhejo,dc_replace_card,dc_replace_card,gold_ok,"'ghis gya' = worn out, colloquial"
+adversarial,mera cc kaam nahi kr rha chalu karo,cc_unblock_card,cc_unblock_card,gold_ok,Could be unblock or technical issue
+adversarial,mera cc se bada payment nahi ho rha,cc_limit_increase,cc_limit_increase,gold_ok,Complaint framing that implies limit increase need
+messy,mera crd card chori ho gya block karo,cc_block_card,cc_block_card,gold_ok,
+adversarial,mera khata dikhao pura,acc_explore,acc_explore,gold_ok,'khata dikhao pura' = show full account
+adversarial,mera plastic card btao credit wala,cc_explore,cc_explore,gold_ok,'plastic card' ‚Äî unusual phrasing for explore
+messy,mera savings account dikhao,acc_explore,acc_check_balance,gold_wrong,
+adversarial,mere card ka number yaad nahi jo atm me daalte h,dc_reset_pin,dc_reset_pin,gold_ok,"'number' instead of PIN, describes ATM usage"
+messy,naya debit card chahiye mujhe,dc_replace_card,dc_apply_new,gold_wrong,
+adversarial,paiso ka lena dena dikhao,acc_mini_statement,acc_mini_statement,gold_ok,Colloquial ‚Äî 'lena dena' = transactions
+adversarial,pese h ya nhi,acc_check_balance,acc_check_balance,gold_ok,"Y/N framing, no explicit balance word"
+adversarial,poora karza nipta do aaj hi,loan_foreclosure,loan_foreclosure,gold_ok,'karza nipta do' = settle all debt
+adversarial,purana card chhodo naya do,dc_replace_card,dc_replace_card,gold_ok,"'chhodo' = forget it, very colloquial"
+adversarial,sab batao poora,st_continuation,st_continuation,gold_ok,'sab batao' = tell everything ‚Äî continuation from partial info
+adversarial,sab khatam karo mera,acc_close_account,acc_close_account,gold_ok,Very vague ‚Äî 'sab khatam' could mean anything
+messy,suspicous txn dikha rha h mera ac,sec_report_fraud,sec_report_fraud,gold_ok,
+adversarial,zyada shopping krni h cc pe allow karo,cc_limit_increase,cc_limit_increase,gold_ok,'allow karo' = very indirect limit increase

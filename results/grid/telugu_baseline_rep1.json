@@ -1,0 +1,418 @@
+{
+ "probe": "telugu_transfer",
+ "config": "baseline",
+ "rep": 1,
+ "overall_accuracy": 0.75,
+ "tier_accuracy": {
+  "clean": 0.8,
+  "messy": 0.8667,
+  "adversarial": 0.6
+ },
+ "tier_counts": {
+  "clean": 10,
+  "messy": 15,
+  "adversarial": 15
+ },
+ "per_query": [
+  {
+   "tier": "clean",
+   "taen": "loan foreclosure ela cheyalo cheppu bro",
+   "hinglish": "How to do loan foreclosure",
+   "expected": "loan_foreclosure",
+   "got": "loan_foreclosure",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 1769.4
+  },
+  {
+   "tier": "clean",
+   "taen": "na CC bill pay cheyali bro",
+   "hinglish": "I want to pay my CC outstanding amount",
+   "expected": "cc_pay_bill",
+   "got": "cc_pay_bill",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 794.3
+  },
+  {
+   "tier": "clean",
+   "taen": "na account lo evaro fraud transaction chesaru ra",
+   "hinglish": "Someone made a fraudulent transaction on my account",
+   "expected": "sec_report_fraud",
+   "got": "sec_report_fraud",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 560.4
+  },
+  {
+   "tier": "clean",
+   "taen": "inkem options unnayo chupinchu ra",
+   "hinglish": "Show me more options",
+   "expected": "st_continuation",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.7993,
+   "latency_ms": 687.8
+  },
+  {
+   "tier": "clean",
+   "taen": "na mini statement chupinchu bro",
+   "hinglish": "Show my mini statement",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.9124,
+   "latency_ms": 91.4
+  },
+  {
+   "tier": "clean",
+   "taen": "last 5 transactions chupinchu bro",
+   "hinglish": "Show last 5 transactions",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.9271,
+   "latency_ms": 86.4
+  },
+  {
+   "tier": "clean",
+   "taen": "Loan services ee cheyyoccha balance check EMI block card vallu",
+   "hinglish": "What loan services are available",
+   "expected": "loan_explore",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.8672,
+   "latency_ms": 1525.2
+  },
+  {
+   "tier": "clean",
+   "taen": "na loan EMI details chupinchu bro",
+   "hinglish": "Show me my loan EMI details",
+   "expected": "loan_emi_details",
+   "got": "loan_emi_details",
+   "correct": true,
+   "confidence": 0.95,
+   "latency_ms": 561.7
+  },
+  {
+   "tier": "clean",
+   "taen": "na savings account close cheyali bro",
+   "hinglish": "I want to close my savings account",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 559.0
+  },
+  {
+   "tier": "clean",
+   "taen": "na credit card limit penchandi bro",
+   "hinglish": "Please raise my credit card spending limit",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.8716,
+   "latency_ms": 62.7
+  },
+  {
+   "tier": "messy",
+   "taen": "inkemaina unnaya chupinchu ra",
+   "hinglish": "aur bhi dikhao",
+   "expected": "st_continuation",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.5718,
+   "latency_ms": 60.0
+  },
+  {
+   "tier": "messy",
+   "taen": "na account close cheyali ra",
+   "hinglish": "accnt band krwana h mera",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 398.6
+  },
+  {
+   "tier": "messy",
+   "taen": "na account gurinchi full details cheppu bro",
+   "hinglish": "account ki poori info chahiye",
+   "expected": "acc_explore",
+   "got": "acc_explore",
+   "correct": true,
+   "confidence": 0.85,
+   "latency_ms": 518.9
+  },
+  {
+   "tier": "messy",
+   "taen": "na credit card ki inkonchem limit kavali bro",
+   "hinglish": "credit card pe aur limit chahiye",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.8614,
+   "latency_ms": 65.1
+  },
+  {
+   "tier": "messy",
+   "taen": "recent transactions konchem chupinchu bro",
+   "hinglish": "recent txns dikhao zra",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.91,
+   "latency_ms": 518.9
+  },
+  {
+   "tier": "messy",
+   "taen": "na CC poyindi ra block chey",
+   "hinglish": "cc band krdo yaar kho gya h",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 581.6
+  },
+  {
+   "tier": "messy",
+   "taen": "UPI lo 300 pampu ra",
+   "hinglish": "upay se bhej do 300 rs",
+   "expected": "upi_send",
+   "got": "upi_send",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 610.5
+  },
+  {
+   "tier": "messy",
+   "taen": "Gopi ki UPI lo 800 pampu ra",
+   "hinglish": "gopi ko upi se 800 bhejo",
+   "expected": "upi_send",
+   "got": "upi_send",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 533.0
+  },
+  {
+   "tier": "messy",
+   "taen": "na savings account close cheyali ra",
+   "hinglish": "savings account close krna h",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 451.0
+  },
+  {
+   "tier": "messy",
+   "taen": "na debit card dobbesindhi ra block chey",
+   "hinglish": "mera debit card chori ho gya band karo",
+   "expected": "dc_block_card",
+   "got": "dc_block_card",
+   "correct": true,
+   "confidence": 0.816,
+   "latency_ms": 565.7
+  },
+  {
+   "tier": "messy",
+   "taen": "na card dobbesaru ra block chey",
+   "hinglish": "mera crd card chori ho gya block karo",
+   "expected": "cc_block_card",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.5927,
+   "latency_ms": 878.2
+  },
+  {
+   "tier": "messy",
+   "taen": "CC gurinchi full cheppu mawa",
+   "hinglish": "cc ke baare mein btao sab",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 594.7
+  },
+  {
+   "tier": "messy",
+   "taen": "UPI lo 2000 pampu ra",
+   "hinglish": "upi se 2000 bhejdo yaar",
+   "expected": "upi_send",
+   "got": "upi_send",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 667.4
+  },
+  {
+   "tier": "messy",
+   "taen": "na savings account close cheyandi",
+   "hinglish": "khata close krdo mera savings wala",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.7905,
+   "latency_ms": 352.8
+  },
+  {
+   "tier": "messy",
+   "taen": "credit card options em unnayo chupinchu",
+   "hinglish": "credit card ke options dikhao",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 791.7
+  },
+  {
+   "tier": "adversarial",
+   "taen": "na credit card gayab ayyindhi ra block chey",
+   "hinglish": "card gayab ho gaya mera credit wala",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.799,
+   "latency_ms": 414.7
+  },
+  {
+   "tier": "adversarial",
+   "taen": "ee month CC bill entha vachindo cheppu bro",
+   "hinglish": "is mahine cc pe kitna gaya",
+   "expected": "cc_view_statement",
+   "got": "cc_view_statement",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 695.2
+  },
+  {
+   "tier": "adversarial",
+   "taen": "evaro na account hack chesaru ra",
+   "hinglish": "kisi ne mera account hack kr liya",
+   "expected": "sec_report_fraud",
+   "got": "sec_report_fraud",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 738.6
+  },
+  {
+   "tier": "adversarial",
+   "taen": "inko account ki amount transfer chey ra",
+   "hinglish": "amount move karo dusre account me",
+   "expected": "pay_transfer",
+   "got": "pay_transfer",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 424.1
+  },
+  {
+   "tier": "adversarial",
+   "taen": "last week em em deduct ayyindo chupinchu",
+   "hinglish": "pichle hafte kya kya kata",
+   "expected": "acc_mini_statement",
+   "got": "acc_transaction_search",
+   "correct": false,
+   "confidence": 0.85,
+   "latency_ms": 1033.0
+  },
+  {
+   "tier": "adversarial",
+   "taen": "evariki paisal pampalo cheppu ra",
+   "hinglish": "kisi ko paise dene h",
+   "expected": "pay_transfer",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.6277,
+   "latency_ms": 82.4
+  },
+  {
+   "tier": "adversarial",
+   "taen": "na ATM PIN marchipoya ra reset cheyali",
+   "hinglish": "atm me pin galat ho gya",
+   "expected": "dc_reset_pin",
+   "got": "dc_reset_pin",
+   "correct": true,
+   "confidence": 0.819,
+   "latency_ms": 82.3
+  },
+  {
+   "tier": "adversarial",
+   "taen": "na account statement chupinchu ra",
+   "hinglish": "hisab dikhao",
+   "expected": "acc_mini_statement",
+   "got": "acc_detailed_statement",
+   "correct": false,
+   "confidence": 0.9,
+   "latency_ms": 722.3
+  },
+  {
+   "tier": "adversarial",
+   "taen": "na balance entha undo cheppu ra",
+   "hinglish": "kya hua mera paisa",
+   "expected": "acc_mini_statement",
+   "got": "acc_check_balance",
+   "correct": false,
+   "confidence": 0.95,
+   "latency_ms": 719.0
+  },
+  {
+   "tier": "adversarial",
+   "taen": "vere account lo 5000 veyyi ra",
+   "hinglish": "dusre account me daal do 5000",
+   "expected": "pay_transfer",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.6508,
+   "latency_ms": 821.9
+  },
+  {
+   "tier": "adversarial",
+   "taen": "inkem cheyocho chupinchu ra",
+   "hinglish": "aur dikhao kya kya kr sakte",
+   "expected": "st_continuation",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.5562,
+   "latency_ms": 82.4
+  },
+  {
+   "tier": "adversarial",
+   "taen": "credit card safe ledu block cheyandi",
+   "hinglish": "credit card safe nahi hai band karo",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.7905,
+   "latency_ms": 493.9
+  },
+  {
+   "tier": "adversarial",
+   "taen": "na CC limit saripovatledu ra penchandi",
+   "hinglish": "mera cc se bada payment nahi ho rha",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.879,
+   "latency_ms": 92.8
+  },
+  {
+   "tier": "adversarial",
+   "taen": "na card PIN marchipoya ra reset cheyali",
+   "hinglish": "4 digit wala code bhool gya card ka",
+   "expected": "dc_reset_pin",
+   "got": "dc_reset_pin",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 429.2
+  },
+  {
+   "tier": "adversarial",
+   "taen": "na CC meedha fraud avthundhi ra block chey",
+   "hinglish": "cc pe fraud ho rha h band kro",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 1010.6
+  }
+ ]
+}

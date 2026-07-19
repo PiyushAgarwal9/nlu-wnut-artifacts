@@ -1,0 +1,818 @@
+{
+ "probe": "tamil_t2_genz_transfer",
+ "config": "nonorm",
+ "rep": 1,
+ "overall_accuracy": 0.85,
+ "tier_accuracy": {
+  "clean": 0.9,
+  "messy": 0.9333,
+  "adversarial": 0.7333
+ },
+ "tier_counts": {
+  "clean": 20,
+  "messy": 30,
+  "adversarial": 30
+ },
+ "per_query": [
+  {
+   "tier": "clean",
+   "taen": "loan foreclosure epdi panradhu bro?",
+   "hinglish": "How to do loan foreclosure",
+   "expected": "loan_foreclosure",
+   "got": "loan_foreclosure",
+   "correct": true,
+   "confidence": 0.7225,
+   "latency_ms": 1327.7
+  },
+  {
+   "tier": "clean",
+   "taen": "dei en CC outstanding amount pay pannanum da",
+   "hinglish": "I want to pay my CC outstanding amount",
+   "expected": "cc_pay_bill",
+   "got": "cc_pay_bill",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 601.5
+  },
+  {
+   "tier": "clean",
+   "taen": "dei en account la yaaro fraud transaction panitaanga da",
+   "hinglish": "Someone made a fraudulent transaction on my account",
+   "expected": "sec_report_fraud",
+   "got": "sec_report_fraud",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 503.7
+  },
+  {
+   "tier": "clean",
+   "taen": "innum vera options kaatu da",
+   "hinglish": "Show me more options",
+   "expected": "st_continuation",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.856,
+   "latency_ms": 814.7
+  },
+  {
+   "tier": "clean",
+   "taen": "en mini statement kaatu da",
+   "hinglish": "Show my mini statement",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.9603,
+   "latency_ms": 73.6
+  },
+  {
+   "tier": "clean",
+   "taen": "last 5 transaction kaatu bro",
+   "hinglish": "Show last 5 transactions",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.9332,
+   "latency_ms": 74.3
+  },
+  {
+   "tier": "clean",
+   "taen": "enna enna loan irukku bro?",
+   "hinglish": "What loan services are available",
+   "expected": "loan_explore",
+   "got": "loan_explore",
+   "correct": true,
+   "confidence": 0.85,
+   "latency_ms": 774.5
+  },
+  {
+   "tier": "clean",
+   "taen": "en loan EMI details kaatu da",
+   "hinglish": "Show me my loan EMI details",
+   "expected": "loan_emi_details",
+   "got": "loan_emi_details",
+   "correct": true,
+   "confidence": 0.96,
+   "latency_ms": 498.0
+  },
+  {
+   "tier": "clean",
+   "taen": "en savings account ah close pannanum da",
+   "hinglish": "I want to close my savings account",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 556.7
+  },
+  {
+   "tier": "clean",
+   "taen": "en credit card limit konjam increase pannunga bro",
+   "hinglish": "Please raise my credit card spending limit",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.8835,
+   "latency_ms": 456.2
+  },
+  {
+   "tier": "clean",
+   "taen": "loan la evlo balance irukku bro?",
+   "hinglish": "How much loan is remaining",
+   "expected": "loan_outstanding",
+   "got": "loan_outstanding",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 502.9
+  },
+  {
+   "tier": "clean",
+   "taen": "en credit card details kaatu da",
+   "hinglish": "Show my credit card information",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 602.7
+  },
+  {
+   "tier": "clean",
+   "taen": "en debit card PIN maathi vidu da",
+   "hinglish": "Change my debit card PIN",
+   "expected": "dc_reset_pin",
+   "got": "dc_reset_pin",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 551.1
+  },
+  {
+   "tier": "clean",
+   "taen": "en credit card ah thirumba activate pannu da",
+   "hinglish": "Please reactivate my credit card",
+   "expected": "cc_unblock_card",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.8566,
+   "latency_ms": 880.3
+  },
+  {
+   "tier": "clean",
+   "taen": "en account la evlo balance irukku nu kaatu",
+   "hinglish": "Show me my current account balance",
+   "expected": "acc_check_balance",
+   "got": "acc_check_balance",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 531.3
+  },
+  {
+   "tier": "clean",
+   "taen": "recent transactions kaatu bro pls",
+   "hinglish": "I want to see my recent transactions",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 486.8
+  },
+  {
+   "tier": "clean",
+   "taen": "en debit card damage aagiduchu puthusu venum da",
+   "hinglish": "I need a replacement debit card",
+   "expected": "dc_replace_card",
+   "got": "dc_replace_card",
+   "correct": true,
+   "confidence": 0.8556,
+   "latency_ms": 864.4
+  },
+  {
+   "tier": "clean",
+   "taen": "en debit card kaana pochu da block pannu pls",
+   "hinglish": "My debit card is lost please block it",
+   "expected": "dc_block_card",
+   "got": "dc_block_card",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 558.7
+  },
+  {
+   "tier": "clean",
+   "taen": "en credit card pathi sollu pa",
+   "hinglish": "Tell me about my credit card",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 554.7
+  },
+  {
+   "tier": "clean",
+   "taen": "en credit card statement kaatu da",
+   "hinglish": "Show my credit card statement",
+   "expected": "cc_view_statement",
+   "got": "cc_view_statement",
+   "correct": true,
+   "confidence": 0.9549,
+   "latency_ms": 79.4
+  },
+  {
+   "tier": "messy",
+   "taen": "dei en credit card thirudi pochu da block pannu",
+   "hinglish": "mera crd card chori ho gya block karo",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 590.1
+  },
+  {
+   "tier": "messy",
+   "taen": "dei cc pathi full details sollu pa",
+   "hinglish": "cc ke baare mein btao sab",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 604.0
+  },
+  {
+   "tier": "messy",
+   "taen": "dei upi la 2000 anuppu da",
+   "hinglish": "upi se 2000 bhejdo yaar",
+   "expected": "upi_send",
+   "got": "upi_send",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 543.8
+  },
+  {
+   "tier": "messy",
+   "taen": "en savings account ah close pannu da",
+   "hinglish": "khata close krdo mera savings wala",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.833,
+   "latency_ms": 605.7
+  },
+  {
+   "tier": "messy",
+   "taen": "credit card options enna iruku nu kaatu",
+   "hinglish": "credit card ke options dikhao",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.9,
+   "latency_ms": 470.6
+  },
+  {
+   "tier": "messy",
+   "taen": "en cc block aagiduchu da thirumba open pannu",
+   "hinglish": "mera cc block h usko kholo",
+   "expected": "cc_unblock_card",
+   "got": "cc_unblock_card",
+   "correct": true,
+   "confidence": 0.8556,
+   "latency_ms": 622.5
+  },
+  {
+   "tier": "messy",
+   "taen": "en debit card kaana pochu da block pannu",
+   "hinglish": "mera dbt card kho gaya block kro",
+   "expected": "dc_block_card",
+   "got": "dc_block_card",
+   "correct": true,
+   "confidence": 0.816,
+   "latency_ms": 893.9
+  },
+  {
+   "tier": "messy",
+   "taen": "innum options irukka nu kaatu",
+   "hinglish": "aur options btao",
+   "expected": "st_continuation",
+   "got": "st_help",
+   "correct": false,
+   "confidence": 0.8564,
+   "latency_ms": 1773.4
+  },
+  {
+   "tier": "messy",
+   "taen": "amir ku 2000 anuppu da ipo",
+   "hinglish": "amir ko 2000 trf krdo abhi",
+   "expected": "pay_transfer",
+   "got": "pay_transfer",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 1377.0
+  },
+  {
+   "tier": "messy",
+   "taen": "account la recent activity kaatu",
+   "hinglish": "haal ki activity dikhao account ki",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.97,
+   "latency_ms": 462.2
+  },
+  {
+   "tier": "messy",
+   "taen": "en debit card udane block pannu da",
+   "hinglish": "debit card block karo turant",
+   "expected": "dc_block_card",
+   "got": "dc_block_card",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 678.0
+  },
+  {
+   "tier": "messy",
+   "taen": "last few transactions kaatu da",
+   "hinglish": "last few transactions btao",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.97,
+   "latency_ms": 663.6
+  },
+  {
+   "tier": "messy",
+   "taen": "cc thirumba enable pannu da",
+   "hinglish": "cc enable karo dobara",
+   "expected": "cc_unblock_card",
+   "got": "cc_unblock_card",
+   "correct": true,
+   "confidence": 0.8556,
+   "latency_ms": 476.6
+  },
+  {
+   "tier": "messy",
+   "taen": "atm pin puthusa maathi vidu",
+   "hinglish": "atm pin change chahiye naya",
+   "expected": "dc_reset_pin",
+   "got": "dc_reset_pin",
+   "correct": true,
+   "confidence": 0.799,
+   "latency_ms": 919.7
+  },
+  {
+   "tier": "messy",
+   "taen": "gopi ku upi la 800 anuppu da",
+   "hinglish": "gopi ko upi se 800 bhejo",
+   "expected": "upi_send",
+   "got": "upi_send",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 533.6
+  },
+  {
+   "tier": "messy",
+   "taen": "credit card bill evlo varuthu bro?",
+   "hinglish": "credit card ka bill kitna aaya",
+   "expected": "cc_view_statement",
+   "got": "cc_payment_due",
+   "correct": false,
+   "confidence": 0.92,
+   "latency_ms": 540.8
+  },
+  {
+   "tier": "messy",
+   "taen": "en credit card ah reactivate pannanum da",
+   "hinglish": "card reactivate krna h credit wala",
+   "expected": "cc_unblock_card",
+   "got": "cc_unblock_card",
+   "correct": true,
+   "confidence": 0.8835,
+   "latency_ms": 434.5
+  },
+  {
+   "tier": "messy",
+   "taen": "next emi evlo varum sollu",
+   "hinglish": "emi ka amount btao next wala",
+   "expected": "loan_emi_details",
+   "got": "loan_emi_details",
+   "correct": true,
+   "confidence": 0.95,
+   "latency_ms": 594.7
+  },
+  {
+   "tier": "messy",
+   "taen": "en cc bill pay pannu da",
+   "hinglish": "cc ka bill de do mera",
+   "expected": "cc_pay_bill",
+   "got": "cc_pay_bill",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 532.7
+  },
+  {
+   "tier": "messy",
+   "taen": "credit card udane block pannu da",
+   "hinglish": "credit card band karo turant",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.833,
+   "latency_ms": 578.8
+  },
+  {
+   "tier": "messy",
+   "taen": "en cc dues pay pannu da",
+   "hinglish": "mera cc ka dues pay krdo",
+   "expected": "cc_pay_bill",
+   "got": "cc_pay_bill",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 542.9
+  },
+  {
+   "tier": "messy",
+   "taen": "loan foreclosure pannanum da",
+   "hinglish": "foreclosure krwani h loan ki",
+   "expected": "loan_foreclosure",
+   "got": "loan_foreclosure",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 552.5
+  },
+  {
+   "tier": "messy",
+   "taen": "seekiram cc block pannu da pls",
+   "hinglish": "jldi se cc block kro plzz",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 501.8
+  },
+  {
+   "tier": "messy",
+   "taen": "en account ah close pannu pa",
+   "hinglish": "account band karo mera",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.833,
+   "latency_ms": 541.4
+  },
+  {
+   "tier": "messy",
+   "taen": "credit card la enna enna services irukku?",
+   "hinglish": "credit card services kya kya hain",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.8589,
+   "latency_ms": 88.0
+  },
+  {
+   "tier": "messy",
+   "taen": "en credit card limit romba kammi ah irukku increase pannu",
+   "hinglish": "credit card ki limit kam pad rhi h badhao",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.8835,
+   "latency_ms": 495.2
+  },
+  {
+   "tier": "messy",
+   "taen": "en account pathi details sollu da",
+   "hinglish": "mere account ke baare mein btao",
+   "expected": "acc_explore",
+   "got": "acc_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 583.8
+  },
+  {
+   "tier": "messy",
+   "taen": "en loan la evlo balance irukku?",
+   "hinglish": "mere loan me kitna baki h",
+   "expected": "loan_outstanding",
+   "got": "loan_outstanding",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 574.9
+  },
+  {
+   "tier": "messy",
+   "taen": "en debit card ku replacement venum da",
+   "hinglish": "debit card ki replacement chahiye",
+   "expected": "dc_replace_card",
+   "got": "dc_replace_card",
+   "correct": true,
+   "confidence": 0.8794,
+   "latency_ms": 88.4
+  },
+  {
+   "tier": "messy",
+   "taen": "en credit card ku innum limit venum da",
+   "hinglish": "credit card pe aur limit chahiye",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.8928,
+   "latency_ms": 566.5
+  },
+  {
+   "tier": "adversarial",
+   "taen": "paisa edukara card pathi sollu da",
+   "hinglish": "mera paisa nikalne wala card btao",
+   "expected": "dc_explore",
+   "got": "dc_card_details",
+   "correct": false,
+   "confidence": 0.68,
+   "latency_ms": 1169.9
+  },
+  {
+   "tier": "adversarial",
+   "taen": "atm card kaana pochu da block pannu",
+   "hinglish": "atm card gayab h rok do",
+   "expected": "dc_block_card",
+   "got": "dc_block_card",
+   "correct": true,
+   "confidence": 0.833,
+   "latency_ms": 1548.3
+  },
+  {
+   "tier": "adversarial",
+   "taen": "next payment evlo varum bro?",
+   "hinglish": "next payment kitna aayega",
+   "expected": "loan_emi_details",
+   "got": "loan_emi_details",
+   "correct": true,
+   "confidence": 0.9,
+   "latency_ms": 465.3
+  },
+  {
+   "tier": "adversarial",
+   "taen": "vera account ku amount transfer pannu da",
+   "hinglish": "amount move karo dusre account me",
+   "expected": "pay_transfer",
+   "got": "pay_transfer",
+   "correct": true,
+   "confidence": 0.8075,
+   "latency_ms": 1661.5
+  },
+  {
+   "tier": "adversarial",
+   "taen": "maasam evlo emi kattanum bro?",
+   "hinglish": "loan ka bojh kitna h mahine ka",
+   "expected": "loan_emi_details",
+   "got": "loan_emi_details",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 1007.9
+  },
+  {
+   "tier": "adversarial",
+   "taen": "debit card expire aagiduchu enna pananum bro?",
+   "hinglish": "debit card expire ho gya ab kya",
+   "expected": "dc_replace_card",
+   "got": "dc_replace_card",
+   "correct": true,
+   "confidence": 0.8556,
+   "latency_ms": 592.8
+  },
+  {
+   "tier": "adversarial",
+   "taen": "cc limit yen romba kammi ah irukku increase pannu da",
+   "hinglish": "cc limit itni kam kyun h badhao",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.8742,
+   "latency_ms": 607.2
+  },
+  {
+   "tier": "adversarial",
+   "taen": "credit card bill settle pannu da",
+   "hinglish": "credit card ka hisab clear karo",
+   "expected": "cc_pay_bill",
+   "got": "cc_pay_bill",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 454.9
+  },
+  {
+   "tier": "adversarial",
+   "taen": "credit card full details kaatu da",
+   "hinglish": "credit card ka sab kuch dikhao",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.88,
+   "latency_ms": 1054.5
+  },
+  {
+   "tier": "adversarial",
+   "taen": "credit card thirumba activate pannu da",
+   "hinglish": "dobara activate karo credit card",
+   "expected": "cc_unblock_card",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.7183,
+   "latency_ms": 736.7
+  },
+  {
+   "tier": "adversarial",
+   "taen": "loan la enna enna options irukku bro?",
+   "hinglish": "loan related kya kya hai",
+   "expected": "loan_explore",
+   "got": "loan_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 385.8
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en credit card full details sollu da",
+   "hinglish": "mere credit card ki info de do poori",
+   "expected": "cc_explore",
+   "got": "cc_explore",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 930.1
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en account ah close pannu da ellam mudiyattum",
+   "hinglish": "sab khatam karo mera",
+   "expected": "acc_close_account",
+   "got": "acc_close_account",
+   "correct": true,
+   "confidence": 0.799,
+   "latency_ms": 481.2
+  },
+  {
+   "tier": "adversarial",
+   "taen": "yaarukku paisa anuppanum nu sollu",
+   "hinglish": "kisi ko paise dene h",
+   "expected": "pay_transfer",
+   "got": "pay_transfer",
+   "correct": true,
+   "confidence": 0.7225,
+   "latency_ms": 644.9
+  },
+  {
+   "tier": "adversarial",
+   "taen": "cc pathi help venum da",
+   "hinglish": "cc related help chahiye",
+   "expected": "cc_explore",
+   "got": "cc_block_card",
+   "correct": false,
+   "confidence": 0.3825,
+   "latency_ms": 783.3
+  },
+  {
+   "tier": "adversarial",
+   "taen": "full loan amount settle pannu da ipo",
+   "hinglish": "poora karza nipta do aaj hi",
+   "expected": "loan_foreclosure",
+   "got": "loan_foreclosure",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 626.6
+  },
+  {
+   "tier": "adversarial",
+   "taen": "loan eppa mudiyum innum evlo kattanum?",
+   "hinglish": "loan kab khatam hoga kitna bcha",
+   "expected": "loan_outstanding",
+   "got": "loan_outstanding",
+   "correct": true,
+   "confidence": 0.85,
+   "latency_ms": 686.8
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en ATM card ah block pannu da",
+   "hinglish": "mera wala card band karo jo paise nikalte h",
+   "expected": "dc_block_card",
+   "got": "dc_block_card",
+   "correct": true,
+   "confidence": 0.833,
+   "latency_ms": 593.2
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en EMI evlo varum sollu",
+   "hinglish": "kist kitni h meri",
+   "expected": "loan_emi_details",
+   "got": "loan_emi_details",
+   "correct": true,
+   "confidence": 0.92,
+   "latency_ms": 533.8
+  },
+  {
+   "tier": "adversarial",
+   "taen": "credit card limit pothala da increase pannu",
+   "hinglish": "credit card chhota pad rha h",
+   "expected": "cc_limit_increase",
+   "got": "cc_limit_increase",
+   "correct": true,
+   "confidence": 0.9114,
+   "latency_ms": 435.0
+  },
+  {
+   "tier": "adversarial",
+   "taen": "scan panni 200 anuppu da",
+   "hinglish": "scan karke paisa de do 200",
+   "expected": "upi_send",
+   "got": "upi_send",
+   "correct": true,
+   "confidence": 0.782,
+   "latency_ms": 527.9
+  },
+  {
+   "tier": "adversarial",
+   "taen": "recent transactions kaatu da",
+   "hinglish": "paiso ka lena dena dikhao",
+   "expected": "acc_mini_statement",
+   "got": "acc_mini_statement",
+   "correct": true,
+   "confidence": 0.98,
+   "latency_ms": 714.7
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en credit card kaana pochu da block pannu",
+   "hinglish": "card gayab ho gaya mera credit wala",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.816,
+   "latency_ms": 587.1
+  },
+  {
+   "tier": "adversarial",
+   "taen": "mothama pay pannanum da loan close pannu",
+   "hinglish": "sab ek saath de deta hu khatam karo",
+   "expected": "loan_foreclosure",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.5956,
+   "latency_ms": 988.1
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en card PIN marandhuten da reset pannanum",
+   "hinglish": "4 digit wala code bhool gya card ka",
+   "expected": "dc_reset_pin",
+   "got": "dc_reset_pin",
+   "correct": true,
+   "confidence": 0.8245,
+   "latency_ms": 528.7
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en cc velai seyala da activate pannu",
+   "hinglish": "mera cc kaam nahi kr rha chalu karo",
+   "expected": "cc_unblock_card",
+   "got": "cc_activate_card",
+   "correct": false,
+   "confidence": 0.92,
+   "latency_ms": 794.0
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en account full details sollu da",
+   "hinglish": "account ka sab kuch btao",
+   "expected": "acc_explore",
+   "got": "acc_detailed_statement",
+   "correct": false,
+   "confidence": 0.94,
+   "latency_ms": 676.6
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en credit card ah block pannu da",
+   "hinglish": "mera plastic card rok do credit wala",
+   "expected": "cc_block_card",
+   "got": "cc_block_card",
+   "correct": true,
+   "confidence": 0.833,
+   "latency_ms": 634.7
+  },
+  {
+   "tier": "adversarial",
+   "taen": "bank ku evlo kattanum irukku?",
+   "hinglish": "bank ko kitna dena h abhi",
+   "expected": "loan_outstanding",
+   "got": "acc_explore",
+   "correct": false,
+   "confidence": 0.72,
+   "latency_ms": 854.7
+  },
+  {
+   "tier": "adversarial",
+   "taen": "en loan enna status la irukku bro?",
+   "hinglish": "loan ka scene kya h mera",
+   "expected": "loan_explore",
+   "got": "out_of_scope",
+   "correct": false,
+   "confidence": 0.8354,
+   "latency_ms": 1350.7
+  }
+ ]
+}

@@ -1,0 +1,3465 @@
+{
+  "timestamp": "2026-07-13_0806",
+  "ablated": [
+    "normalizer"
+  ],
+  "reranker": null,
+  "overall_accuracy": 0.8333,
+  "total_queries": 330,
+  "correct": 275,
+  "per_intent": {
+    "acc_check_balance": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 482.8,
+      "avg_confidence": 0.9422,
+      "confusions": {
+        "sec_report_fraud": 1,
+        "out_of_scope": 1
+      }
+    },
+    "acc_mini_statement": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 546.2,
+      "avg_confidence": 0.932,
+      "confusions": {
+        "pay_payment_history": 1,
+        "out_of_scope": 1
+      }
+    },
+    "acc_close_account": {
+      "accuracy": 0.9333,
+      "total": 15,
+      "correct": 14,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 417.0,
+      "avg_confidence": 0.8631,
+      "confusions": {
+        "out_of_scope": 1
+      }
+    },
+    "cc_block_card": {
+      "accuracy": 0.9333,
+      "total": 15,
+      "correct": 14,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 403.2,
+      "avg_confidence": 0.8449,
+      "confusions": {
+        "sec_freeze_account": 1
+      }
+    },
+    "cc_unblock_card": {
+      "accuracy": 0.9333,
+      "total": 15,
+      "correct": 14,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 560.5,
+      "avg_confidence": 0.8465,
+      "confusions": {
+        "dc_activate_card": 1
+      }
+    },
+    "cc_view_statement": {
+      "accuracy": 0.8,
+      "total": 15,
+      "correct": 12,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 594.0,
+      "avg_confidence": 0.9199,
+      "confusions": {
+        "out_of_scope": 3
+      }
+    },
+    "cc_pay_bill": {
+      "accuracy": 0.6667,
+      "total": 15,
+      "correct": 10,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.2,
+      "avg_latency_ms": 560.1,
+      "avg_confidence": 0.8393,
+      "confusions": {
+        "cc_view_statement": 1,
+        "pay_refund_request": 1,
+        "out_of_scope": 3
+      }
+    },
+    "cc_limit_increase": {
+      "accuracy": 0.8,
+      "total": 15,
+      "correct": 12,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 872.3,
+      "avg_confidence": 0.8896,
+      "confusions": {
+        "out_of_scope": 3
+      }
+    },
+    "dc_block_card": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 708.0,
+      "avg_confidence": 0.8695,
+      "confusions": {
+        "cc_temp_lock": 1,
+        "out_of_scope": 1
+      }
+    },
+    "dc_replace_card": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 847.1,
+      "avg_confidence": 0.8964,
+      "confusions": {
+        "dc_apply_new": 1,
+        "out_of_scope": 3
+      }
+    },
+    "dc_reset_pin": {
+      "accuracy": 0.8,
+      "total": 15,
+      "correct": 12,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 842.7,
+      "avg_confidence": 0.8458,
+      "confusions": {
+        "out_of_scope": 2,
+        "st_help": 1
+      }
+    },
+    "loan_emi_details": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.7143,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 916.1,
+      "avg_confidence": 0.9211,
+      "confusions": {
+        "out_of_scope": 2,
+        "acc_minimum_balance": 2
+      }
+    },
+    "loan_outstanding": {
+      "accuracy": 0.8,
+      "total": 15,
+      "correct": 12,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 1018.0,
+      "avg_confidence": 0.8792,
+      "confusions": {
+        "sec_reset_password": 1,
+        "out_of_scope": 1,
+        "loan_tenure_remaining": 1
+      }
+    },
+    "loan_foreclosure": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 789.3,
+      "avg_confidence": 0.8321,
+      "confusions": {
+        "cc_emi_preclosure": 1,
+        "out_of_scope": 1
+      }
+    },
+    "pay_transfer": {
+      "accuracy": 0.9333,
+      "total": 15,
+      "correct": 14,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 1.0,
+      "avg_latency_ms": 1219.0,
+      "avg_confidence": 0.8046,
+      "confusions": {
+        "out_of_scope": 1
+      }
+    },
+    "upi_send": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.4,
+      "avg_latency_ms": 906.3,
+      "avg_confidence": 0.8238,
+      "confusions": {
+        "out_of_scope": 3,
+        "pay_transfer": 1
+      }
+    },
+    "sec_report_fraud": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 1.0,
+      "avg_latency_ms": 607.3,
+      "avg_confidence": 0.7981,
+      "confusions": {
+        "sec_report_phishing": 1,
+        "acc_charge_reversal": 1
+      }
+    },
+    "loan_explore": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 903.6,
+      "avg_confidence": 0.9468,
+      "confusions": {
+        "out_of_scope": 2
+      }
+    },
+    "acc_explore": {
+      "accuracy": 0.7333,
+      "total": 15,
+      "correct": 11,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.6,
+      "avg_latency_ms": 1030.9,
+      "avg_confidence": 0.9307,
+      "confusions": {
+        "out_of_scope": 1,
+        "pay_list_beneficiaries": 1,
+        "acc_detailed_statement": 2
+      }
+    },
+    "dc_explore": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 1.0,
+      "avg_latency_ms": 534.3,
+      "avg_confidence": 0.95,
+      "confusions": {
+        "dc_card_details": 1,
+        "acc_explore": 1
+      }
+    },
+    "cc_explore": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 0.6667,
+      "messy_accuracy": 1.0,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 928.5,
+      "avg_confidence": 0.9412,
+      "confusions": {
+        "dc_card_details": 1,
+        "out_of_scope": 1
+      }
+    },
+    "st_continuation": {
+      "accuracy": 0.8667,
+      "total": 15,
+      "correct": 13,
+      "clean_accuracy": 1.0,
+      "messy_accuracy": 0.8571,
+      "adversarial_accuracy": 0.8,
+      "avg_latency_ms": 844.4,
+      "avg_confidence": 0.9176,
+      "confusions": {
+        "out_of_scope": 1,
+        "acc_check_balance": 1
+      }
+    }
+  },
+  "tier_accuracy": {
+    "clean": 0.9394,
+    "messy": 0.9221,
+    "adversarial": 0.6455
+  },
+  "oos_accuracy": null,
+  "latency": {
+    "avg_ms": 751.4,
+    "p50_ms": 512.1
+  },
+  "per_query": [
+    {
+      "query": "Check my account balance",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 56.5
+    },
+    {
+      "query": "What is the balance in my savings account",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 535.0
+    },
+    {
+      "query": "Show me my current account balance",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 439.5
+    },
+    {
+      "query": "balance kitna hai mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 38.2
+    },
+    {
+      "query": "balnce dekh lo mera jldi se",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 402.5
+    },
+    {
+      "query": "paiso ka hisab btao zra",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 837.5
+    },
+    {
+      "query": "accnt me kitna pada h abhi",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 472.0
+    },
+    {
+      "query": "kitna paisa hai mere account me",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 408.9
+    },
+    {
+      "query": "balance check krna h jldi",
+      "tier": "messy",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 50.9
+    },
+    {
+      "query": "mera balanc kitna bacha h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 522.9
+    },
+    {
+      "query": "mere pas kitne h",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 490.2
+    },
+    {
+      "query": "pese h ya nhi",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 471.8
+    },
+    {
+      "query": "account me kya scene h",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1334.2
+    },
+    {
+      "query": "kitna bacha mera",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 527.5
+    },
+    {
+      "query": "meri jeb me kitna h bank wale",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 653.9
+    },
+    {
+      "query": "Show my mini statement",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 431.8
+    },
+    {
+      "query": "Show last 5 transactions",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 465.6
+    },
+    {
+      "query": "I want to see my recent transactions",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 505.2
+    },
+    {
+      "query": "mini statemnt btao last 5 txn",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 470.3
+    },
+    {
+      "query": "pichli 5 transction btao meri",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 446.5
+    },
+    {
+      "query": "recent txns dikhao zra",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 479.2
+    },
+    {
+      "query": "kya kya hua h mere account me",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 515.1
+    },
+    {
+      "query": "last few transactions btao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 454.2
+    },
+    {
+      "query": "haal ki activity dikhao account ki",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 370.9
+    },
+    {
+      "query": "statemnt chahiye chota wala",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 534.9
+    },
+    {
+      "query": "kya hua mera paisa",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1113.5
+    },
+    {
+      "query": "hisab dikhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 707.6
+    },
+    {
+      "query": "pichle hafte kya kya kata",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 508.1
+    },
+    {
+      "query": "recent wala dikhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 577.9
+    },
+    {
+      "query": "paiso ka lena dena dikhao",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 611.6
+    },
+    {
+      "query": "I want to close my savings account",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 63.4
+    },
+    {
+      "query": "Close my bank account",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 55.5
+    },
+    {
+      "query": "Please close my account",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 54.0
+    },
+    {
+      "query": "accnt band krwana h mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 538.3
+    },
+    {
+      "query": "khata close krdo mera savings wala",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 461.4
+    },
+    {
+      "query": "account band karo mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 54.6
+    },
+    {
+      "query": "savings account close krna h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 416.9
+    },
+    {
+      "query": "mera ac close kr dijiye",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 443.6
+    },
+    {
+      "query": "bank account band krwana chahta hu",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 461.1
+    },
+    {
+      "query": "ac closure ka process btao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 451.5
+    },
+    {
+      "query": "sab khatam karo mera",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 867.5
+    },
+    {
+      "query": "nahi rakhna ye account",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 481.7
+    },
+    {
+      "query": "band karo sab kuch",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 750.7
+    },
+    {
+      "query": "chhod raha hu bank",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 429.9
+    },
+    {
+      "query": "mujhe ye account nahi chahiye ab",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 724.8
+    },
+    {
+      "query": "Block my credit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 55.3
+    },
+    {
+      "query": "I want to block my credit card immediately",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 60.1
+    },
+    {
+      "query": "My credit card is stolen, please block it",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 64.9
+    },
+    {
+      "query": "credit card blok kr do turt",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 466.4
+    },
+    {
+      "query": "cc band krdo yaar kho gya h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 488.1
+    },
+    {
+      "query": "mera crd card chori ho gya block karo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 507.3
+    },
+    {
+      "query": "jldi se cc block kro plzz",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 432.5
+    },
+    {
+      "query": "card blck krwana h mera credit wala",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 488.8
+    },
+    {
+      "query": "credit card band karo turant",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 500.4
+    },
+    {
+      "query": "cc kho gaya hai plz block",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 426.8
+    },
+    {
+      "query": "card gayab ho gaya mera credit wala",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 498.8
+    },
+    {
+      "query": "kisi ne mera cc use kar liya rok do",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 474.9
+    },
+    {
+      "query": "credit card safe nahi hai band karo",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 494.7
+    },
+    {
+      "query": "cc pe fraud ho rha h band kro",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 580.9
+    },
+    {
+      "query": "mera plastic card rok do credit wala",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 508.0
+    },
+    {
+      "query": "Unblock my credit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1040.3
+    },
+    {
+      "query": "Please reactivate my credit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 494.6
+    },
+    {
+      "query": "I want to unblock my blocked credit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 382.8
+    },
+    {
+      "query": "cc unblock krdo mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 576.6
+    },
+    {
+      "query": "credit card phir se chalu karo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 502.6
+    },
+    {
+      "query": "card reactivate krna h credit wala",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 475.5
+    },
+    {
+      "query": "mera cc block h usko kholo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 420.1
+    },
+    {
+      "query": "credit card wapas chalu krdo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 401.0
+    },
+    {
+      "query": "blocked cc ko unblock karo plz",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 390.6
+    },
+    {
+      "query": "cc enable karo dobara",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 488.2
+    },
+    {
+      "query": "credit card phir se use krna h",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 554.4
+    },
+    {
+      "query": "mera cc kaam nahi kr rha chalu karo",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 997.9
+    },
+    {
+      "query": "card band tha ab kholo",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 611.8
+    },
+    {
+      "query": "dobara activate karo credit card",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 577.9
+    },
+    {
+      "query": "cc chalana h wapas",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 493.9
+    },
+    {
+      "query": "Show my credit card statement",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 386.0
+    },
+    {
+      "query": "I want to see my credit card bill",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 503.3
+    },
+    {
+      "query": "Display my CC statement for this month",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 480.3
+    },
+    {
+      "query": "cc ka statemnt dikhao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 440.0
+    },
+    {
+      "query": "credit card ka bill kitna aaya",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 344.8
+    },
+    {
+      "query": "cc bill dikhao zra pichle mahine ka",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 459.7
+    },
+    {
+      "query": "credti card ka statemnt bhjo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 318.0
+    },
+    {
+      "query": "cc ka bill btao is month ka",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 447.7
+    },
+    {
+      "query": "mera credit card statement chahiye",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 792.5
+    },
+    {
+      "query": "cc ka hisab btao kitna kata",
+      "tier": "messy",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 697.4
+    },
+    {
+      "query": "credit card pe kitna kharch hua",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 516.7
+    },
+    {
+      "query": "cc pe kya kya laga hai",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 882.5
+    },
+    {
+      "query": "credit card ka lena dena btao",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1675.1
+    },
+    {
+      "query": "is mahine cc pe kitna gaya",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 648.4
+    },
+    {
+      "query": "mere cc ka sara record dikhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 318.0
+    },
+    {
+      "query": "Pay my credit card bill",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 424.9
+    },
+    {
+      "query": "I want to pay my CC outstanding amount",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 317.3
+    },
+    {
+      "query": "Make payment for my credit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 423.1
+    },
+    {
+      "query": "cc ka bill pay karo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 265.6
+    },
+    {
+      "query": "credit card ka paisa bharo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 375.9
+    },
+    {
+      "query": "cc bill payment krna h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 528.7
+    },
+    {
+      "query": "credit card ka outstanding bharo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 449.9
+    },
+    {
+      "query": "cc ka bill de do mera",
+      "tier": "messy",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1024.3
+    },
+    {
+      "query": "credit card ka bkaya chuka do",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 449.2
+    },
+    {
+      "query": "mera cc ka dues pay krdo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 400.1
+    },
+    {
+      "query": "cc ka paisa wapas karo",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 488.8
+    },
+    {
+      "query": "credit card ka hisab clear karo",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 513.3
+    },
+    {
+      "query": "cc pe jo baki h wo de do",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 824.3
+    },
+    {
+      "query": "credit card ka karza utaaro",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1068.9
+    },
+    {
+      "query": "cc zero karo mera",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 847.0
+    },
+    {
+      "query": "Increase my credit card limit",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 430.9
+    },
+    {
+      "query": "I want a higher credit limit",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1454.1
+    },
+    {
+      "query": "Please raise my credit card spending limit",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 397.3
+    },
+    {
+      "query": "cc ki limit badhao meri plz",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 378.2
+    },
+    {
+      "query": "credit lmt increase chahye 2 lakh ki",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1485.7
+    },
+    {
+      "query": "mera cc limit badha do",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 383.1
+    },
+    {
+      "query": "credit card ki limit kam pad rhi h badhao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1485.3
+    },
+    {
+      "query": "cc ka limit zyada karo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 423.4
+    },
+    {
+      "query": "credit card pe aur limit chahiye",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 451.4
+    },
+    {
+      "query": "limit increase krdo cc ka",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1428.5
+    },
+    {
+      "query": "cc pe zyada kharcha krna h limit badhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1485.2
+    },
+    {
+      "query": "credit card chhota pad rha h",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1663.9
+    },
+    {
+      "query": "mera cc se bada payment nahi ho rha",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 496.1
+    },
+    {
+      "query": "cc limit itni kam kyun h badhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 495.2
+    },
+    {
+      "query": "zyada shopping krni h cc pe allow karo",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 625.7
+    },
+    {
+      "query": "Block my debit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 39.0
+    },
+    {
+      "query": "I want to block my ATM card immediately",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 42.1
+    },
+    {
+      "query": "My debit card is lost, please block it",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 45.5
+    },
+    {
+      "query": "debit card block karo turant",
+      "tier": "messy",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 36.8
+    },
+    {
+      "query": "mera dbt card kho gaya block kro",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 388.4
+    },
+    {
+      "query": "dc bhi blok kr do mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1511.0
+    },
+    {
+      "query": "debit card band krwao jldi",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1480.1
+    },
+    {
+      "query": "atm card block kr dijiye",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 434.1
+    },
+    {
+      "query": "mera debit card chori ho gya band karo",
+      "tier": "messy",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 59.0
+    },
+    {
+      "query": "dc block krdo plz urgnt",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 420.2
+    },
+    {
+      "query": "atm card gayab h rok do",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1690.4
+    },
+    {
+      "query": "mera bank ka card kho gya jo atm me daalte h",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 520.4
+    },
+    {
+      "query": "debit card safe nahi h ab",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1640.2
+    },
+    {
+      "query": "mera wala card band karo jo paise nikalte h",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1792.8
+    },
+    {
+      "query": "paisa nikalne wala card rok do kisi ne chura liya",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 519.9
+    },
+    {
+      "query": "I need a replacement debit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 398.5
+    },
+    {
+      "query": "My debit card is damaged, I need a new one",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 493.0
+    },
+    {
+      "query": "Please replace my debit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1537.8
+    },
+    {
+      "query": "naya debit card chahiye mujhe",
+      "tier": "messy",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 505.7
+    },
+    {
+      "query": "dc replace krdo mera purana toot gya",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 417.7
+    },
+    {
+      "query": "debit card damaged h naya do",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1633.0
+    },
+    {
+      "query": "card replace karo mera debit wala",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1300.4
+    },
+    {
+      "query": "naya atm card bhejdo mera purana kharab h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1549.4
+    },
+    {
+      "query": "debit card ki replacement chahiye",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 390.2
+    },
+    {
+      "query": "mera dc tut gya naya issue kro",
+      "tier": "messy",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 743.4
+    },
+    {
+      "query": "mera atm card kaam nhi kr rha naya dedo",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 488.8
+    },
+    {
+      "query": "debit card expire ho gya ab kya",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1535.3
+    },
+    {
+      "query": "purana card chhodo naya do",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 683.6
+    },
+    {
+      "query": "atm me dalne wala card toot gya h",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 385.6
+    },
+    {
+      "query": "mera card ghis gya naya bhejo",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 643.9
+    },
+    {
+      "query": "Reset my debit card PIN",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 484.4
+    },
+    {
+      "query": "I forgot my ATM PIN, please reset it",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1486.2
+    },
+    {
+      "query": "Change my debit card PIN",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1470.2
+    },
+    {
+      "query": "dc ka pin reset karo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 371.6
+    },
+    {
+      "query": "mera atm pin bhool gya change kro",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 428.1
+    },
+    {
+      "query": "debit card ka pin badal do",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1489.8
+    },
+    {
+      "query": "pin reset krna h mera dc ka",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 437.9
+    },
+    {
+      "query": "atm pin change chahiye naya",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1477.4
+    },
+    {
+      "query": "mera card ka pin yaad nahi reset krdo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 390.9
+    },
+    {
+      "query": "dc pin bhool gya naya set kro",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 447.7
+    },
+    {
+      "query": "atm me pin galat ho gya",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 490.0
+    },
+    {
+      "query": "mere card ka number yaad nahi jo atm me daalte h",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1688.1
+    },
+    {
+      "query": "atm se paisa nahi nikl rha pin issue h",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 640.3
+    },
+    {
+      "query": "4 digit wala code bhool gya card ka",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 806.2
+    },
+    {
+      "query": "card ka password change krna h",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 531.8
+    },
+    {
+      "query": "What is my EMI amount",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 449.4
+    },
+    {
+      "query": "Show me my loan EMI details",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 571.7
+    },
+    {
+      "query": "How much is my monthly EMI",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 960.3
+    },
+    {
+      "query": "mra loan ka emi kitna bnta h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1519.2
+    },
+    {
+      "query": "emi ka amount btao next wala",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 451.7
+    },
+    {
+      "query": "loan ki kist kitni h meri",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 2503.2
+    },
+    {
+      "query": "emi details btao loan ka",
+      "tier": "messy",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 828.7
+    },
+    {
+      "query": "mahine ka emi kitna h mera",
+      "tier": "messy",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1121.5
+    },
+    {
+      "query": "loan ka monthly installment btao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 429.3
+    },
+    {
+      "query": "meri emi kitni aati h har mahine",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 500.3
+    },
+    {
+      "query": "har mahine kitna dena padta h",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1244.2
+    },
+    {
+      "query": "mera monthly kharcha kitna h bank ko",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 676.7
+    },
+    {
+      "query": "kist kitni h meri",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1406.9
+    },
+    {
+      "query": "loan ka bojh kitna h mahine ka",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 504.4
+    },
+    {
+      "query": "next payment kitna aayega",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 574.2
+    },
+    {
+      "query": "What is my loan outstanding amount",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1568.2
+    },
+    {
+      "query": "How much loan is remaining",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 317.5
+    },
+    {
+      "query": "Show my total loan balance",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 474.1
+    },
+    {
+      "query": "loan kitna bcha h abhi tk",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 482.3
+    },
+    {
+      "query": "baki loan amount btao mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1479.9
+    },
+    {
+      "query": "home loan ka outstanding kitna h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 442.9
+    },
+    {
+      "query": "mere loan me kitna baki h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1464.9
+    },
+    {
+      "query": "loan ka remaining amount btao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1488.5
+    },
+    {
+      "query": "abhi kitna loan chukana baki h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 815.9
+    },
+    {
+      "query": "total loan kitna h mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1469.1
+    },
+    {
+      "query": "abhi kitna dena h total",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1530.2
+    },
+    {
+      "query": "mera karza kitna reh gya",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1667.3
+    },
+    {
+      "query": "bank ko kitna dena h abhi",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 838.2
+    },
+    {
+      "query": "loan kab khatam hoga kitna bcha",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 731.4
+    },
+    {
+      "query": "principal kitna baki h mere loan ka",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 500.0
+    },
+    {
+      "query": "I want to foreclose my loan",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 61.2
+    },
+    {
+      "query": "Close my loan by paying full amount",
+      "tier": "clean",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 71.0
+    },
+    {
+      "query": "How to do loan foreclosure",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1489.8
+    },
+    {
+      "query": "loan foreclose krna h pura",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1466.1
+    },
+    {
+      "query": "loan band karo mera ek saath pay krke",
+      "tier": "messy",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 83.9
+    },
+    {
+      "query": "jldi se loan band krwana h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 414.2
+    },
+    {
+      "query": "loan pura chuka ke band karo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1472.3
+    },
+    {
+      "query": "foreclosure krwani h loan ki",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 291.7
+    },
+    {
+      "query": "poora loan ek baar me bharna h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 739.0
+    },
+    {
+      "query": "loan close karna h full payment krke",
+      "tier": "messy",
+      "correct": true,
+      "source": "rule",
+      "slm_invoked": false,
+      "latency_ms": 79.8
+    },
+    {
+      "query": "sab ek saath de deta hu khatam karo",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1757.0
+    },
+    {
+      "query": "loan se chutkara chahiye jldi",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1444.7
+    },
+    {
+      "query": "poora karza nipta do aaj hi",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 799.5
+    },
+    {
+      "query": "loan ka scene khatam karo",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 952.9
+    },
+    {
+      "query": "bank ka sab hisab saaf karo loan wala",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 715.8
+    },
+    {
+      "query": "Transfer 5000 to Rahul",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 971.4
+    },
+    {
+      "query": "I want to send money to another account",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 503.2
+    },
+    {
+      "query": "Make a fund transfer via NEFT",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1494.8
+    },
+    {
+      "query": "5k bhj do rahul ko yaar",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 2638.1
+    },
+    {
+      "query": "paise transfer krne h 10k ajay ke ac me",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1481.5
+    },
+    {
+      "query": "rupye bhejne h bhai ko neft se",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 486.2
+    },
+    {
+      "query": "amir ko 2000 trf krdo abhi",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1028.8
+    },
+    {
+      "query": "trnsfr krna h 15000 savings se",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 833.5
+    },
+    {
+      "query": "paisa bhej do mummy ke account me",
+      "tier": "messy",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 627.0
+    },
+    {
+      "query": "fund transfer krna h 50k",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1947.3
+    },
+    {
+      "query": "rahul ko de do paisa",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 986.1
+    },
+    {
+      "query": "dusre account me daal do 5000",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1357.7
+    },
+    {
+      "query": "bhai ka kaam karna h paisa wala",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 2887.0
+    },
+    {
+      "query": "kisi ko paise dene h",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 530.0
+    },
+    {
+      "query": "amount move karo dusre account me",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 512.1
+    },
+    {
+      "query": "Send 500 via UPI",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 425.2
+    },
+    {
+      "query": "Make a UPI payment of 1000",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1506.3
+    },
+    {
+      "query": "Pay 200 using UPI to Amit",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1462.1
+    },
+    {
+      "query": "upi se pese bhj do 500 rs",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 507.3
+    },
+    {
+      "query": "upi payment krni h 1200 ki",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1442.4
+    },
+    {
+      "query": "gopi ko upi se 800 bhejo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 753.3
+    },
+    {
+      "query": "upi se 2000 bhejdo yaar",
+      "tier": "messy",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 723.9
+    },
+    {
+      "query": "upi payment karo 500 amit ko",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 518.6
+    },
+    {
+      "query": "upi se paisa transfer kro 1500",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 448.9
+    },
+    {
+      "query": "upay se bhej do 300 rs",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1478.1
+    },
+    {
+      "query": "phone pe se 500 bhejo",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 498.4
+    },
+    {
+      "query": "gpay se amit ko 1000 do",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 659.2
+    },
+    {
+      "query": "scan karke paisa de do 200",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 2001.3
+    },
+    {
+      "query": "@upi id pe bhej do 500",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 508.8
+    },
+    {
+      "query": "online payment karo 800 amit ko phone se",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 660.3
+    },
+    {
+      "query": "I want to report a fraud on my account",
+      "tier": "clean",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 934.6
+    },
+    {
+      "query": "Report unauthorized transaction",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 504.3
+    },
+    {
+      "query": "Someone made a fraudulent transaction on my account",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 407.1
+    },
+    {
+      "query": "froud ho gya h mera ac pe report kro",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 633.0
+    },
+    {
+      "query": "kisi ne mere ac se paise nikal liye",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 523.5
+    },
+    {
+      "query": "suspicous txn dikha rha h mera ac",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 523.9
+    },
+    {
+      "query": "fraud report krna h mere account pe",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1370.0
+    },
+    {
+      "query": "unauthorized transaction hua h mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 432.4
+    },
+    {
+      "query": "mera paise kisi ne chura liye account se",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 359.2
+    },
+    {
+      "query": "galat transaction ho gya h mera ac pe",
+      "tier": "messy",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 853.2
+    },
+    {
+      "query": "kisi ne mera account hack kr liya",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 453.5
+    },
+    {
+      "query": "mere paise gayab ho gye account se",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 497.0
+    },
+    {
+      "query": "mujhe lagta h kisi ne mere account me haath daala",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 492.9
+    },
+    {
+      "query": "ye transaction maine nahi ki",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 506.3
+    },
+    {
+      "query": "account me gadbad h paise kam ho gye bina kuch kiye",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 618.9
+    },
+    {
+      "query": "Tell me about my loans",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 438.0
+    },
+    {
+      "query": "What loan services are available",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1647.8
+    },
+    {
+      "query": "Show me my loan details",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1594.6
+    },
+    {
+      "query": "loan ki jankari do mujhe",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 434.5
+    },
+    {
+      "query": "loan ke baare mein batao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 309.6
+    },
+    {
+      "query": "mera loan ka kya scene h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 511.5
+    },
+    {
+      "query": "loan options kya hain mere",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 419.7
+    },
+    {
+      "query": "loan ke baare me jaanna h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1506.2
+    },
+    {
+      "query": "loan ki poori jankari plz",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 435.9
+    },
+    {
+      "query": "mera loan ka overview dikhao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1596.0
+    },
+    {
+      "query": "loan ka scene kya h mera",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1149.6
+    },
+    {
+      "query": "loan me kya kya kr skte h",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1022.8
+    },
+    {
+      "query": "loan wala section dikhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 504.0
+    },
+    {
+      "query": "mere loans ki info de do sab",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 476.1
+    },
+    {
+      "query": "loan related kya kya hai",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1508.1
+    },
+    {
+      "query": "Tell me about my bank accounts",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1614.0
+    },
+    {
+      "query": "Show me my account details",
+      "tier": "clean",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 558.5
+    },
+    {
+      "query": "What can I do with my account",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1617.7
+    },
+    {
+      "query": "account ki jankari do meri",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1481.2
+    },
+    {
+      "query": "mere account ke baare mein btao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 440.8
+    },
+    {
+      "query": "account ka kya scene h mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 498.8
+    },
+    {
+      "query": "account ki poori info chahiye",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1685.0
+    },
+    {
+      "query": "account related kya kya kar sakte h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 598.1
+    },
+    {
+      "query": "mera savings account dikhao",
+      "tier": "messy",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 2486.4
+    },
+    {
+      "query": "account ka overview dedo",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 455.7
+    },
+    {
+      "query": "account me kya kya available h",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 513.7
+    },
+    {
+      "query": "mera khata dikhao pura",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 526.7
+    },
+    {
+      "query": "account ka sab kuch btao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 493.4
+    },
+    {
+      "query": "mere account ki poori details do",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1966.9
+    },
+    {
+      "query": "account services btao kya kya hai",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 526.2
+    },
+    {
+      "query": "Tell me about my debit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 309.4
+    },
+    {
+      "query": "Show my debit card details",
+      "tier": "clean",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 515.4
+    },
+    {
+      "query": "What services are available for my debit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 469.7
+    },
+    {
+      "query": "debit card ki jankari do",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1347.5
+    },
+    {
+      "query": "debit card ke baare mein batao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 440.0
+    },
+    {
+      "query": "mera atm card ka kya scene h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 562.7
+    },
+    {
+      "query": "dc ki poori info chahiye mujhe",
+      "tier": "messy",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 586.0
+    },
+    {
+      "query": "debit card ke options dikhao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 413.2
+    },
+    {
+      "query": "mera debit card ka overview do",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 466.4
+    },
+    {
+      "query": "atm card related kya kya kr skte h",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 554.7
+    },
+    {
+      "query": "debit card me kya kya hai",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 353.7
+    },
+    {
+      "query": "mera atm card wala section dikhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 475.0
+    },
+    {
+      "query": "debit card ki sab jaankari de do",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 548.5
+    },
+    {
+      "query": "atm card ka kya kya kar sakte",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 390.4
+    },
+    {
+      "query": "mera paisa nikalne wala card btao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 582.6
+    },
+    {
+      "query": "Tell me about my credit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 746.0
+    },
+    {
+      "query": "Show my credit card information",
+      "tier": "clean",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 2034.0
+    },
+    {
+      "query": "What can I do with my credit card",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1477.3
+    },
+    {
+      "query": "credit card ki jankari do meri",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 465.1
+    },
+    {
+      "query": "cc ke baare mein btao sab",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 497.0
+    },
+    {
+      "query": "credit card ka scene kya hai mera",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 600.5
+    },
+    {
+      "query": "cc ki poori info chahiye plz",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 453.8
+    },
+    {
+      "query": "credit card ke options dikhao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1461.0
+    },
+    {
+      "query": "mera cc ka overview de do",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 496.5
+    },
+    {
+      "query": "credit card services kya kya hain",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 491.8
+    },
+    {
+      "query": "cc me kya kya available h batao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 472.1
+    },
+    {
+      "query": "credit card ka sab kuch dikhao",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1492.6
+    },
+    {
+      "query": "mere credit card ki info de do poori",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1484.8
+    },
+    {
+      "query": "cc related help chahiye",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 495.2
+    },
+    {
+      "query": "mera plastic card btao credit wala",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 1260.5
+    },
+    {
+      "query": "Tell me more",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 384.0
+    },
+    {
+      "query": "What else can I do",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1500.2
+    },
+    {
+      "query": "Show me more options",
+      "tier": "clean",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 751.6
+    },
+    {
+      "query": "aur batao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 508.7
+    },
+    {
+      "query": "aur kya kya hai",
+      "tier": "messy",
+      "correct": false,
+      "source": "retrieval",
+      "slm_invoked": true,
+      "latency_ms": 570.4
+    },
+    {
+      "query": "aur bhi dikhao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 375.2
+    },
+    {
+      "query": "aur options btao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 695.1
+    },
+    {
+      "query": "thoda aur btao",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 801.1
+    },
+    {
+      "query": "aur bta do kuch",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 388.9
+    },
+    {
+      "query": "aur info do plz",
+      "tier": "messy",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1532.0
+    },
+    {
+      "query": "baaki kya hai",
+      "tier": "adversarial",
+      "correct": false,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 1751.9
+    },
+    {
+      "query": "aur kuch",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 473.8
+    },
+    {
+      "query": "sab batao poora",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 2017.8
+    },
+    {
+      "query": "more please",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 428.5
+    },
+    {
+      "query": "aur dikhao kya kya kr sakte",
+      "tier": "adversarial",
+      "correct": true,
+      "source": "slm",
+      "slm_invoked": true,
+      "latency_ms": 486.1
+    }
+  ],
+  "failures": [
+    {
+      "query": "account me kya scene h",
+      "expected": "acc_check_balance",
+      "got": "sec_report_fraud",
+      "confidence": 0.7673,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "Slang — 'kya scene h' is very vague"
+    },
+    {
+      "query": "meri jeb me kitna h bank wale",
+      "expected": "acc_check_balance",
+      "got": "out_of_scope",
+      "confidence": 0.9958,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Colloquial — 'jeb me' = pocket, indirect reference"
+    },
+    {
+      "query": "pichle hafte kya kya kata",
+      "expected": "acc_mini_statement",
+      "got": "pay_payment_history",
+      "confidence": 0.92,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "Colloquial — 'kata' = deducted, implies transaction list"
+    },
+    {
+      "query": "paiso ka lena dena dikhao",
+      "expected": "acc_mini_statement",
+      "got": "out_of_scope",
+      "confidence": 0.9893,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Colloquial — 'lena dena' = transactions"
+    },
+    {
+      "query": "sab khatam karo mera",
+      "expected": "acc_close_account",
+      "got": "out_of_scope",
+      "confidence": 0.999,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Very vague — 'sab khatam' could mean anything"
+    },
+    {
+      "query": "cc pe fraud ho rha h band kro",
+      "expected": "cc_block_card",
+      "got": "sec_freeze_account",
+      "confidence": 0.7905,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "Could confuse with sec_report_fraud"
+    },
+    {
+      "query": "mera cc kaam nahi kr rha chalu karo",
+      "expected": "cc_unblock_card",
+      "got": "dc_activate_card",
+      "confidence": 0.85,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "Could be unblock or technical issue"
+    },
+    {
+      "query": "cc ka hisab btao kitna kata",
+      "expected": "cc_view_statement",
+      "got": "out_of_scope",
+      "confidence": 0.9982,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "cc pe kya kya laga hai",
+      "expected": "cc_view_statement",
+      "got": "out_of_scope",
+      "confidence": 0.539,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Colloquial — 'kya laga hai' = what charges"
+    },
+    {
+      "query": "credit card ka lena dena btao",
+      "expected": "cc_view_statement",
+      "got": "out_of_scope",
+      "confidence": 0.9707,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'lena dena' = transactions, vague"
+    },
+    {
+      "query": "cc ka bill de do mera",
+      "expected": "cc_pay_bill",
+      "got": "cc_view_statement",
+      "confidence": 0.92,
+      "tier": "messy",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "cc ka paisa wapas karo",
+      "expected": "cc_pay_bill",
+      "got": "pay_refund_request",
+      "confidence": 0.782,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'wapas karo' could be bill payment or refund"
+    },
+    {
+      "query": "cc pe jo baki h wo de do",
+      "expected": "cc_pay_bill",
+      "got": "out_of_scope",
+      "confidence": 0.9958,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'baki' = remaining, implies outstanding"
+    },
+    {
+      "query": "credit card ka karza utaaro",
+      "expected": "cc_pay_bill",
+      "got": "out_of_scope",
+      "confidence": 0.905,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'karza utaaro' = repay debt, very colloquial"
+    },
+    {
+      "query": "cc zero karo mera",
+      "expected": "cc_pay_bill",
+      "got": "out_of_scope",
+      "confidence": 0.9454,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Slang — 'zero karo' = clear the balance"
+    },
+    {
+      "query": "credit card chhota pad rha h",
+      "expected": "cc_limit_increase",
+      "got": "out_of_scope",
+      "confidence": 0.9412,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'chhota pad rha' = falling short, implies limit increase"
+    },
+    {
+      "query": "mera cc se bada payment nahi ho rha",
+      "expected": "cc_limit_increase",
+      "got": "out_of_scope",
+      "confidence": 0.9351,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Complaint framing that implies limit increase need"
+    },
+    {
+      "query": "zyada shopping krni h cc pe allow karo",
+      "expected": "cc_limit_increase",
+      "got": "out_of_scope",
+      "confidence": 0.9778,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'allow karo' = very indirect limit increase"
+    },
+    {
+      "query": "atm card gayab h rok do",
+      "expected": "dc_block_card",
+      "got": "cc_temp_lock",
+      "confidence": 0.8835,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'gayab' = missing, 'rok do' = stop — no 'block' keyword"
+    },
+    {
+      "query": "mera wala card band karo jo paise nikalte h",
+      "expected": "dc_block_card",
+      "got": "out_of_scope",
+      "confidence": 0.9431,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Describes debit card function without naming it"
+    },
+    {
+      "query": "naya debit card chahiye mujhe",
+      "expected": "dc_replace_card",
+      "got": "dc_apply_new",
+      "confidence": 0.92,
+      "tier": "messy",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "mera dc tut gya naya issue kro",
+      "expected": "dc_replace_card",
+      "got": "out_of_scope",
+      "confidence": 0.9373,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "purana card chhodo naya do",
+      "expected": "dc_replace_card",
+      "got": "out_of_scope",
+      "confidence": 0.9437,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'chhodo' = forget it, very colloquial"
+    },
+    {
+      "query": "mera card ghis gya naya bhejo",
+      "expected": "dc_replace_card",
+      "got": "out_of_scope",
+      "confidence": 0.9732,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'ghis gya' = worn out, colloquial"
+    },
+    {
+      "query": "mere card ka number yaad nahi jo atm me daalte h",
+      "expected": "dc_reset_pin",
+      "got": "out_of_scope",
+      "confidence": 0.9822,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'number' instead of PIN, describes ATM usage"
+    },
+    {
+      "query": "atm se paisa nahi nikl rha pin issue h",
+      "expected": "dc_reset_pin",
+      "got": "st_help",
+      "confidence": 0.93,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "Complaint framing that implies PIN reset"
+    },
+    {
+      "query": "4 digit wala code bhool gya card ka",
+      "expected": "dc_reset_pin",
+      "got": "out_of_scope",
+      "confidence": 0.9664,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'4 digit code' describes PIN without saying it"
+    },
+    {
+      "query": "emi details btao loan ka",
+      "expected": "loan_emi_details",
+      "got": "out_of_scope",
+      "confidence": 0.9389,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mahine ka emi kitna h mera",
+      "expected": "loan_emi_details",
+      "got": "out_of_scope",
+      "confidence": 0.9901,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "har mahine kitna dena padta h",
+      "expected": "loan_emi_details",
+      "got": "acc_minimum_balance",
+      "confidence": 0.75,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'kitna dena padta' = how much to pay, no EMI/loan keyword"
+    },
+    {
+      "query": "kist kitni h meri",
+      "expected": "loan_emi_details",
+      "got": "acc_minimum_balance",
+      "confidence": 0.8968,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'kist' = installment, very short"
+    },
+    {
+      "query": "mera karza kitna reh gya",
+      "expected": "loan_outstanding",
+      "got": "sec_reset_password",
+      "confidence": 0.0,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'karza' = debt, colloquial for outstanding"
+    },
+    {
+      "query": "bank ko kitna dena h abhi",
+      "expected": "loan_outstanding",
+      "got": "out_of_scope",
+      "confidence": 0.9579,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Very general — could be loan or CC"
+    },
+    {
+      "query": "loan kab khatam hoga kitna bcha",
+      "expected": "loan_outstanding",
+      "got": "loan_tenure_remaining",
+      "confidence": 0.92,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "Two questions in one — tenure + outstanding"
+    },
+    {
+      "query": "sab ek saath de deta hu khatam karo",
+      "expected": "loan_foreclosure",
+      "got": "cc_emi_preclosure",
+      "confidence": 0.782,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'sab ek saath' = everything at once, no loan keyword"
+    },
+    {
+      "query": "poora karza nipta do aaj hi",
+      "expected": "loan_foreclosure",
+      "got": "out_of_scope",
+      "confidence": 0.9834,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'karza nipta do' = settle all debt"
+    },
+    {
+      "query": "paisa bhej do mummy ke account me",
+      "expected": "pay_transfer",
+      "got": "out_of_scope",
+      "confidence": 0.9686,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "upi se 2000 bhejdo yaar",
+      "expected": "upi_send",
+      "got": "out_of_scope",
+      "confidence": 0.8491,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "gpay se amit ko 1000 do",
+      "expected": "upi_send",
+      "got": "out_of_scope",
+      "confidence": 0.9947,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'gpay' = Google Pay — UPI but by app name"
+    },
+    {
+      "query": "scan karke paisa de do 200",
+      "expected": "upi_send",
+      "got": "pay_transfer",
+      "confidence": 0.7225,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'scan karke' implies QR/UPI without saying UPI"
+    },
+    {
+      "query": "online payment karo 800 amit ko phone se",
+      "expected": "upi_send",
+      "got": "out_of_scope",
+      "confidence": 0.9679,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'online payment phone se' — could be UPI or net banking"
+    },
+    {
+      "query": "I want to report a fraud on my account",
+      "expected": "sec_report_fraud",
+      "got": "sec_report_phishing",
+      "confidence": 0.837,
+      "tier": "clean",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "galat transaction ho gya h mera ac pe",
+      "expected": "sec_report_fraud",
+      "got": "acc_charge_reversal",
+      "confidence": 0.782,
+      "tier": "messy",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "loan ka scene kya h mera",
+      "expected": "loan_explore",
+      "got": "out_of_scope",
+      "confidence": 0.8786,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Slang — 'scene kya h' is vague, could confuse with outstanding"
+    },
+    {
+      "query": "loan me kya kya kr skte h",
+      "expected": "loan_explore",
+      "got": "out_of_scope",
+      "confidence": 0.9742,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "Exploring options — not a specific action"
+    },
+    {
+      "query": "Show me my account details",
+      "expected": "acc_explore",
+      "got": "out_of_scope",
+      "confidence": 0.8873,
+      "tier": "clean",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "mera savings account dikhao",
+      "expected": "acc_explore",
+      "got": "pay_list_beneficiaries",
+      "confidence": 0.9232,
+      "tier": "messy",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "mera khata dikhao pura",
+      "expected": "acc_explore",
+      "got": "acc_detailed_statement",
+      "confidence": 0.93,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'khata dikhao pura' = show full account"
+    },
+    {
+      "query": "mere account ki poori details do",
+      "expected": "acc_explore",
+      "got": "acc_detailed_statement",
+      "confidence": 0.85,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'poori details' could confuse with statement or balance"
+    },
+    {
+      "query": "Show my debit card details",
+      "expected": "dc_explore",
+      "got": "dc_card_details",
+      "confidence": 0.96,
+      "tier": "clean",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "dc ki poori info chahiye mujhe",
+      "expected": "dc_explore",
+      "got": "acc_explore",
+      "confidence": 0.92,
+      "tier": "messy",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "Show my credit card information",
+      "expected": "cc_explore",
+      "got": "dc_card_details",
+      "confidence": 0.92,
+      "tier": "clean",
+      "source": "slm",
+      "notes": ""
+    },
+    {
+      "query": "mera plastic card btao credit wala",
+      "expected": "cc_explore",
+      "got": "out_of_scope",
+      "confidence": 0.9175,
+      "tier": "adversarial",
+      "source": "retrieval",
+      "notes": "'plastic card' — unusual phrasing for explore"
+    },
+    {
+      "query": "aur kya kya hai",
+      "expected": "st_continuation",
+      "got": "out_of_scope",
+      "confidence": 0.5447,
+      "tier": "messy",
+      "source": "retrieval",
+      "notes": ""
+    },
+    {
+      "query": "baaki kya hai",
+      "expected": "st_continuation",
+      "got": "acc_check_balance",
+      "confidence": 0.95,
+      "tier": "adversarial",
+      "source": "slm",
+      "notes": "'baaki' = remaining — implies more exists"
+    }
+  ]
+}

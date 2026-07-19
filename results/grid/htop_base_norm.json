@@ -1,0 +1,18 @@
+{
+ "probe": "hinglish_top",
+ "config": "norm",
+ "tag": "base",
+ "n": 6513,
+ "accuracy": 0.6028,
+ "per_domain": {
+  "timer": 0.6248,
+  "weather": 0.6204,
+  "reminder": 0.5275,
+  "music": 0.6432,
+  "navigation": 0.5291,
+  "messaging": 0.6719,
+  "event": 0.6855,
+  "alarm": 0.6126
+ },
+ "total_s": 70.1
+}
