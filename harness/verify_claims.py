@@ -45,8 +45,8 @@ for f in sorted(glob(f"{G}/logged_eval_*.json")):
         r3["pre"].append(g in pre[:3]); r3["post"].append(g in post[:3])
 n = len(r1["pre"])
 print(f"[shortlist recall] n={n} logged escalations: "
-      f"recall@1 {sum(r1['pre'])/n:.3f}->{sum(r1['post'])/n:.3f} (paper .705->.739), "
-      f"recall@3 {sum(r3['pre'])/n:.3f}->{sum(r3['post'])/n:.3f} (paper .875->.898)")
+      f"recall@1 {sum(r1['pre'])/n:.3f}->{sum(r1['post'])/n:.3f} (paper .701->.736), "
+      f"recall@3 {sum(r3['pre'])/n:.3f}->{sum(r3['post'])/n:.3f} (paper .874->.897)")
 
 # 4. Escalation rate determinism
 for f in sorted(glob(f"{G}/b7_*.json"))[:1]:

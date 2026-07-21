@@ -32,10 +32,10 @@ The harness runs against the pipeline codebase (released at camera-ready; the ha
 pipeline-agnostic at the seams it ablates). Example invocations:
 
 ```
-python3 eval/run_v4_eval.py                          # baseline, 330 queries
-python3 eval/run_v4_eval.py --ablate normalizer      # layer ablation
-python3 eval/run_v4_eval.py --reranker rerank --reranker-model <reranker-weights-dir>
-python3 eval/run_taen_transfer.py --csv transfer/tamil_t1_reviewed.csv --config baseline
+python3 harness/run_v4_eval.py                          # baseline, 330 queries
+python3 harness/run_v4_eval.py --ablate normalizer      # layer ablation
+python3 harness/run_v4_eval.py --reranker rerank --reranker-model <reranker-weights-dir>
+python3 harness/run_taen_transfer.py --csv transfer/tamil_t1_reviewed.csv --config baseline
 ```
 
 ## License
@@ -69,3 +69,12 @@ holds the source query it was translated from. File-name prefixes (`tamil_t1`, `
   file (and paper) evaluates 22 core intents (17 action + 4 explore + 1 continuation).
 - `htop_base_{norm,nonorm}.json`: base-encoder (no LoRA) Hinglish-TOP runs backing the
   paper's ".603 both" cell.
+
+## Third-party data notice
+
+Result files `results/grid/htop_*.json` contain queries and gold labels from the public
+Hinglish-TOP dataset (google-research-datasets/Hinglish-TOP), licensed **Apache-2.0**. Those
+records are redistributed under Apache-2.0, not under this bundle's CC BY 4.0 data license;
+see the Hinglish-TOP repository for the original license and attribution. The CC BY 4.0 grant
+in `LICENSE-DATA` covers only the author-created data (BankStress-330, transfer sets,
+adjudication record).
