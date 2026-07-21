@@ -1,4 +1,7 @@
 """ta-en (Tanglish) transfer probe — W-NUT §4.5.
+# REFERENCE RUNNER (not standalone). Assumes the original repo layout (eval/, src/)
+# and the pipeline source + indices, released at camera-ready. This bundle is a
+# result-verification package; use harness/verify_claims.py to recompute headline stats.
 
 Runs reviewer-validated Tanglish queries through the pipeline under 4 configs:
   baseline | -normalizer | -slm | +FT-rerank (alpha 0.3)

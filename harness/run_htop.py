@@ -1,4 +1,7 @@
 """Hinglish-TOP public replication — normalizer factorial, deterministic (no SLM).
+# REFERENCE RUNNER (not standalone). Assumes the original repo layout (eval/, src/)
+# and the pipeline source + indices, released at camera-ready. This bundle is a
+# result-verification package; use harness/verify_claims.py to recompute headline stats.
 
 Usage: python3 eval/run_htop.py --tsv test.tsv --config norm|nonorm --tag lora|base
 Saves eval/results/htop_<tag>_<config>.json

@@ -1,3 +1,7 @@
 Data files in benchmark/, transfer/, adjudication/, and results/ are licensed under
 Creative Commons Attribution 4.0 International (CC BY 4.0):
 https://creativecommons.org/licenses/by/4.0/legalcode.txt
+
+EXCEPTION: results/grid/htop_*.json contain queries and gold labels from the public
+Hinglish-TOP dataset (google-research-datasets/Hinglish-TOP), which is Apache-2.0 licensed.
+Those files are redistributed under Apache-2.0, NOT under this CC BY 4.0 grant. See README.md.

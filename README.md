@@ -28,6 +28,12 @@ The system is referred to as the NLU (system name withheld) for anonymity.
 
 ## Reproducing
 
+The experiment runners (run_v4_eval.py, run_taen_transfer.py, run_htop.py) are **reference
+runners**: they require the pipeline source and prebuilt indices, released at camera-ready. Until
+then,  recomputes the paper's nine headline statistics from the
+released per-query records with no pipeline dependency.
+
+
 The harness runs against the pipeline codebase (released at camera-ready; the harness is
 pipeline-agnostic at the seams it ablates). Example invocations:
 
