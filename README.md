@@ -30,7 +30,8 @@ The system is referred to as the NLU (system name withheld) for anonymity.
 
 The experiment runners (run_v4_eval.py, run_taen_transfer.py, run_htop.py) are **reference
 runners**: they require the pipeline source and prebuilt indices, released at camera-ready. Until
-then,  recomputes the paper's nine headline statistics from the
+then, `python3 harness/verify_claims.py` recomputes the paper's nine selected headline
+statistics from the
 released per-query records with no pipeline dependency.
 
 
@@ -69,8 +70,10 @@ holds the source query it was translated from. File-name prefixes (`tamil_t1`, `
   Deterministic bit-identity holds within each harness era.
 - `eval_2026-07-12_1[56]xx` baseline files carry an older `slm_invoked` logging convention;
   escalation analysis should use `b7_*.json` / `detail_baseline.json`.
-- `harness/verify_claims.py` recomputes the flip rate, half-dose holdout counts, shortlist
-  recall, and escalation rates from the released records alone.
+- `harness/verify_claims.py` recomputes all nine selected headline statistics from the
+  released records alone: flip rate, half-dose holdout counts, shortlist recall, escalation
+  rates, normalizer discordance, arbiter discordance, reranker pairwise comparisons,
+  full-dose augmentation, and the arbiter Hinglish-TOP null.
 - `benchmark/v4_core17_dataset.py`: the filename reflects the original 17 action intents; the
   file (and paper) evaluates 22 core intents (17 action + 4 explore + 1 continuation).
 - `htop_base_{norm,nonorm}.json`: base-encoder (no LoRA) Hinglish-TOP runs backing the

@@ -12,7 +12,8 @@
 | Fig. 2 escalation rate/precision | rates: any `b7_*.json` / `detail_baseline.json`; precision: `b7_*` x per-query ablate-slm files via `harness/esc_precision.py` |
 | Table 3 arbiter substitutes | zero-shot decider `xenc_replace_v2.json`; FT decider `eval_2026-07-12_1555_xenc-replace0.15.json`; 8B arbiter `8b_eval_*.json`; (superseded: `xenc_replace_v1_gatebug_equals_noarbiter.json`) |
 | Table 3 augmentation rows | full dose `fulldose_aug_rep1-3.json` (augmented-taxonomy runs, per-query); half dose `t4_eval_*.json` + `holdout_halfB.json` + `eval_split_halfA.json`. (`t2_eval_*.json` are frozen-checkout verification runs, previously mislabeled as full-dose.) |
-| Table 4 .906 (3 table runs) | `eval_2026-07-12_1651/1659/1702_xenc-rerank0.3.json` (mean .906); the other 12 rerank0.3 runs (15 total, all-run mean .901) back only the 231/240 pairwise inference, not the Table 4 cell |
+| Table 4 zero-shot row (.929/.779/.890) | 3 zero-shot runs: `eval_2026-07-12_1631_xenc-rerank0.3.json`, `eval_2026-07-12_1648_xenc-rerank0.3.json`, `rerank03_rep2.json` |
+| Table 4 .906 (3 FT table runs) | `eval_2026-07-12_1651/1659/1702_xenc-rerank0.3.json` (mean .906); the other 12 rerank0.3 runs (15 total, all-run mean .901) back only the 231/240 pairwise inference, not the Table 4 cell |
 | Table 4 (FT rerank) + 4.4 stats | `eval_*_xenc-rerank0.3.json`, `h_eval_*_xenc-rerank0.3.json`, `rerank03_rep2.json` (15 reranked runs; pairwise claim uses all 16 baseline-run files) vs `b7_*` + baseline aggregates; recall: `logged_eval_*_xenc-rerank0.3.json` |
 | Table 5 (pareto/latency) | latency fields of the files above |
 | Table 6 transfer ta-T1 | `tamil_t1_{baseline,nonorm,noslm,ftrerank}_rep*.json`; stage-wise: `tamil_t1_norm_{agnostic,hinglish}_rep*.json` |
