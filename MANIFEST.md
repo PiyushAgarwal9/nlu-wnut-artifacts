@@ -19,5 +19,5 @@
 | Table 6 transfer ta-T1 | `tamil_t1_{baseline,nonorm,noslm,ftrerank}_rep*.json`; stage-wise: `tamil_t1_norm_{agnostic,hinglish}_rep*.json` |
 | Table 6 transfer ta-T2 genz | `tamil_t2_genz_{baseline,nonorm}_rep*.json` |
 | Table 6 transfer te | `telugu_{baseline,nonorm,noslm,ftrerank}_rep*.json` |
-| Residual-failure taxonomy / 38 failures | 4 adjudication-designated repeats: `b7_1711.json`, `b7_1720.json`, `b7_1723.json`, `b7_1726.json` (majority = fail in >=2 of 4 -> 38; ever-failing 43). All 7 released b7 repeats give 35 majority / 46 ever-failing. |
+| Residual-failure taxonomy / 38 failures | 4 repeats used for the residual-failure taxonomy (identified as the set whose majority-failure set reproduces the adjudication record): `b7_1711.json`, `b7_1720.json`, `b7_1723.json`, `b7_1726.json` (majority = fail in >=2 of 4 -> 38; ever-failing 43). All 7 released b7 repeats give 35 majority / 46 ever-failing. |
 | 5 adjudication | `../adjudication/adjudication_record_FINAL.csv` |
