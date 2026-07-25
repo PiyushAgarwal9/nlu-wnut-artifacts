@@ -1,7 +1,9 @@
 """
 NLU v4 Eval Dataset — 22 Core Intents (17 action + 4 explore + 1 continuation)
 =================================================================================
-~375 queries across 3 tiers:
+BankStress-330 is the 330 EVAL_QUERIES across 3 tiers (66 clean, 154 messy, 110 adversarial).
+This module additionally defines 64 auxiliary queries (29 OOS, 15 multi-intent, 20 boundary),
+so importing all lists yields 394 objects total. Only EVAL_QUERIES constitutes BankStress-330.
   - clean:       Proper English (easy baseline)
   - messy:       Hinglish with typos, abbreviations, slang (real-world)
   - adversarial: Vague, ambiguous, no banking keywords (stress test)

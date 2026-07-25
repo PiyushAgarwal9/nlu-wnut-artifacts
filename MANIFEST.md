@@ -14,10 +14,21 @@
 | Table 3 augmentation rows | full dose `fulldose_aug_rep1-3.json` (augmented-taxonomy runs, per-query); half dose `t4_eval_*.json` + `holdout_halfB.json` + `eval_split_halfA.json`. (`t2_eval_*.json` are frozen-checkout verification runs, previously mislabeled as full-dose.) |
 | Table 4 zero-shot row (.929/.779/.890) | 3 zero-shot runs: `eval_2026-07-12_1631_xenc-rerank0.3.json`, `eval_2026-07-12_1648_xenc-rerank0.3.json`, `rerank03_rep2.json` |
 | Table 4 .906 (3 FT table runs) | `eval_2026-07-12_1651/1659/1702_xenc-rerank0.3.json` (mean .906); the other 12 rerank0.3 runs (15 total, all-run mean .901) back only the 231/240 pairwise inference, not the Table 4 cell |
-| Table 4 (FT rerank) + 4.4 stats | `eval_*_xenc-rerank0.3.json`, `h_eval_*_xenc-rerank0.3.json`, `rerank03_rep2.json` (15 reranked runs; pairwise claim uses all 16 baseline-run files) vs `b7_*` + baseline aggregates; recall: `logged_eval_*_xenc-rerank0.3.json` |
+| Table 4 (FT rerank) + 4.4 stats | `eval_*_xenc-rerank0.3.json`, `h_eval_*_xenc-rerank0.3.json`, `rerank03_rep2.json` (15 reranked runs; the 9 pairwise exceptions in 231/240 are the 3 zero-shot bge runs x 3 baseline repeats, fine-tuned-only is 192/192) vs `b7_*` + baseline aggregates; shortlist recall@3: `logged_eval_*_xenc-rerank0.3.json` (3 byte-identical logs = one measurement; the harness logged post-normalization query strings, so `verify_claims.py` recovers the raw benchmark query per entry and reports recall@3, on which the claim rests) |
 | Table 5 (pareto/latency) | latency fields of the files above |
 | Table 6 transfer ta-T1 | `tamil_t1_{baseline,nonorm,noslm,ftrerank}_rep*.json`; stage-wise: `tamil_t1_norm_{agnostic,hinglish}_rep*.json` |
 | Table 6 transfer ta-T2 genz | `tamil_t2_genz_{baseline,nonorm}_rep*.json` |
 | Table 6 transfer te | `telugu_{baseline,nonorm,noslm,ftrerank}_rep*.json` |
 | Residual-failure taxonomy / 38 failures | 4 repeats used for the residual-failure taxonomy (identified as the set whose majority-failure set reproduces the adjudication record): `b7_1711.json`, `b7_1720.json`, `b7_1723.json`, `b7_1726.json` (majority = fail in >=2 of 4 -> 38; ever-failing 43). All 7 released b7 repeats give 35 majority / 46 ever-failing. |
 | 5 adjudication | `../adjudication/adjudication_record_FINAL.csv` |
+
+## Housekeeping notes
+
+- `detail_baseline.json` and `eval_split_halfA.json` are the same run (identical timestamp
+  `2026-07-12_1251` and identical `per_query`); `eval_split_halfA.json` has its `failures`
+  list truncated to 16 of 37 entries. No statistic double-counts them: `eval_split_halfA.json`
+  is not in the 16-file baseline pairwise pool.
+- `htop_arbfull1_nonorm.json` differs from the `htop_loraPQ_*` pair in 2 of 6,513 logged query
+  strings (a setup artifact where the others log `nlup`); immaterial to the arbiter null.
+- Deterministic `--arbiter` p50 latency differs by era (pre-patch ~60 ms, post-patch ~22 ms;
+  see paper footnote 1). Table latency figures are from the pre-patch era.

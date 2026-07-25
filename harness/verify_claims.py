@@ -31,22 +31,40 @@ for f in sorted(glob(f"{G}/t4_eval_*.json")):
     print(f"[holdout] {f.split('/')[-1]}: fixed {sum(1 for q in hold if t.get(q))}/21 "
           f"(paper: 2, 2, 1)")
 
-# 3. Shortlist recall@1/@3 from rerank logs + benchmark gold
+# 3. Shortlist recall@1/@3 from rerank logs + benchmark gold.
+#    The harness logged the POST-normalization query string; a naive exact-string join to
+#    the raw gold keeps only ~87 byte-identical queries (0 clean) and biases recall@1 upward.
+#    We recover the raw benchmark query for every reranked entry (normalized-exact, then
+#    difflib fuzzy). On the full reranked set recall@3 rises ~2pp under every recovery method,
+#    while recall@1 shows no gain (near-flat to slightly negative). We therefore rest the
+#    shortlist claim on recall@3. (A future harness should log the raw query / query index.)
+import difflib
 src = open("benchmark/v4_core17_dataset.py").read()
-gold = dict(re.findall(r'EvalQuery\("((?:[^"\\]|\\.)*)",\s*"([^"]+)"', src))
-r1 = {"pre": [], "post": []}; r3 = {"pre": [], "post": []}
-for f in sorted(glob(f"{G}/logged_eval_*.json")):
-    for e in json.load(open(f))["rerank_log"]:
-        g = gold.get(e["query"])
-        if not g:
+rows = re.findall(r'EvalQuery\("((?:[^"\\]|\\.)*)",\s*"([^"]+)",\s*"([^"]+)"', src)
+def _n(s):
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", s.lower())).strip()
+gnorm = {}
+for _q, _intent, _tier in rows:
+    gnorm.setdefault(_n(_q), _intent)
+_keys = list(gnorm)
+# the three logged_eval rerank_logs are byte-identical (deterministic component): use one
+log = json.load(open(sorted(glob(f"{G}/logged_eval_*.json"))[0]))["rerank_log"]
+r1p = r1q = r3p = r3q = n = 0
+for e in log:
+    if e["query"] == "warmup query":
+        continue
+    gi = gnorm.get(_n(e["query"]))
+    if gi is None:
+        m = difflib.get_close_matches(_n(e["query"]), _keys, n=1, cutoff=0.6)
+        if not m:
             continue
-        pre = [c[0] for c in e["pre_top5"]]; post = [c[0] for c in e["post_top5"]]
-        r1["pre"].append(g == pre[0]); r1["post"].append(g == post[0])
-        r3["pre"].append(g in pre[:3]); r3["post"].append(g in post[:3])
-n = len(r1["pre"])
-print(f"[shortlist recall] n={n} logged escalations: "
-      f"recall@1 {sum(r1['pre'])/n:.3f}->{sum(r1['post'])/n:.3f} (paper .701->.736), "
-      f"recall@3 {sum(r3['pre'])/n:.3f}->{sum(r3['post'])/n:.3f} (paper .874->.897)")
+        gi = gnorm[m[0]]
+    pre = [c[0] for c in e["pre_top5"]]; post = [c[0] for c in e["post_top5"]]
+    r1p += gi == pre[0]; r1q += gi == post[0]
+    r3p += gi in pre[:3]; r3q += gi in post[:3]; n += 1
+print(f"[shortlist recall] n={n} reranked queries (raw recovered): "
+      f"recall@1 {r1p/n:.3f}->{r1q/n:.3f} (no gain), "
+      f"recall@3 {r3p/n:.3f}->{r3q/n:.3f} (paper: ~+2pp, .85->.88)")
 
 # 4. Escalation rate determinism
 for f in sorted(glob(f"{G}/b7_*.json"))[:1]:

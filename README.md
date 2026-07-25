@@ -20,8 +20,9 @@ The system is referred to as the NLU (system name withheld) for anonymity.
   substitution (identity normalizer, null arbiter, cross-encoder referee/reranker), plus the
   transfer-probe runner, the Hinglish-TOP replication scripts, the reranker training script,
   and the transfer-sheet generator.
-- `results/grid/` — raw per-run result JSONs (per-query records included) for every
-  configuration and repeat reported in the paper.
+- `results/grid/` — raw per-run result JSONs for every reported configuration and repeat.
+  Per-query records are included where available; some legacy runs are aggregate-only and are
+  identified as such in `MANIFEST.md`.
 - `reranker/` — config of the fine-tuned cross-encoder reranker. Full weights (~2.1 GB)
   are released at camera-ready (hosting exceeds anonymous-repository limits); the training
   script and pair-construction recipe in `harness/train_xenc_reranker.py` reproduce them.
