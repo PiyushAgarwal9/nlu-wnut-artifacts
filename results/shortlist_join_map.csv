@@ -1,0 +1,309 @@
+rerank_log_index,eval_query_index,logged_normalized_query,benchmark_query,gold_intent,tier,similarity
+0,1,what is the balance in my savings account,What is the balance in my savings account,acc_check_balance,clean,1.000
+1,2,show mein my current account balance,Show me my current account balance,acc_check_balance,clean,0.971
+2,4,balance dekh lo mera jldi se,balnce dekh lo mera jldi se,acc_check_balance,messy,0.982
+3,5,paiso ka hisab batao zra,paiso ka hisab btao zra,acc_check_balance,messy,0.979
+4,6,account mein kitna pada hai abhi,accnt me kitna pada h abhi,acc_check_balance,messy,0.897
+5,7,kitna paisa hai mere account mein,kitna paisa hai mere account me,acc_check_balance,messy,0.969
+6,8,balance check karna hai jldi,balance check krna h jldi,acc_check_balance,messy,0.943
+7,9,mera balance kitna bacha hai,mera balanc kitna bacha h,acc_check_balance,messy,0.943
+8,10,mere paas kitne hai,mere pas kitne h,acc_check_balance,adversarial,0.914
+9,11,pese hai ya nahi,pese h ya nhi,acc_check_balance,adversarial,0.897
+10,12,account mein kya scene hai,account me kya scene h,acc_check_balance,adversarial,0.917
+11,13,kitna bacha mera,kitna bacha mera,acc_check_balance,adversarial,1.000
+12,14,meri jeb mein kitna hai bank wale,meri jeb me kitna h bank wale,acc_check_balance,adversarial,0.935
+13,15,show my mini statement,Show my mini statement,acc_mini_statement,clean,1.000
+14,16,show last 5 transactions,Show last 5 transactions,acc_mini_statement,clean,1.000
+15,17,i want to see my recent transactions,I want to see my recent transactions,acc_mini_statement,clean,1.000
+16,18,mini statemnt batao last 5 transaction,mini statemnt btao last 5 txn,acc_mini_statement,messy,0.836
+17,19,pichli 5 transction batao meri,pichli 5 transction btao meri,acc_mini_statement,messy,0.983
+18,20,recent transactions dikhao zra,recent txns dikhao zra,acc_mini_statement,messy,0.808
+19,21,kya kya hua hai mere account mein,kya kya hua h mere account me,acc_mini_statement,messy,0.935
+20,22,last few transactions batao,last few transactions btao,acc_mini_statement,messy,0.981
+21,23,haal ki activity dikhao account ki,haal ki activity dikhao account ki,acc_mini_statement,messy,1.000
+22,24,statemnt chahiye chota wala,statemnt chahiye chota wala,acc_mini_statement,messy,1.000
+23,25,kya hua mera paisa,kya hua mera paisa,acc_mini_statement,adversarial,1.000
+24,26,hisab dikhao,hisab dikhao,acc_mini_statement,adversarial,1.000
+25,27,pichle hafte kya kya kata,pichle hafte kya kya kata,acc_mini_statement,adversarial,1.000
+26,28,recent wala dikhao,recent wala dikhao,acc_mini_statement,adversarial,1.000
+27,29,paiso ka lena dena dikhao,paiso ka lena dena dikhao,acc_mini_statement,adversarial,1.000
+28,33,account band krwana hai mera,accnt band krwana h mera,acc_close_account,messy,0.923
+29,38,bank account band krwana chahta hu,bank account band krwana chahta hu,acc_close_account,messy,1.000
+30,39,account closure ka process batao,ac closure ka process btao,acc_close_account,messy,0.897
+31,40,sab khatam karo mera,sab khatam karo mera,acc_close_account,adversarial,1.000
+32,41,nahi rakhna ye account,nahi rakhna ye account,acc_close_account,adversarial,1.000
+33,42,band karo sab kuch,band karo sab kuch,acc_close_account,adversarial,1.000
+34,43,chhod raha hu bank,chhod raha hu bank,acc_close_account,adversarial,1.000
+35,44,mujhe ye account nahi chahiye ab,mujhe ye account nahi chahiye ab,acc_close_account,adversarial,1.000
+36,48,credit card block kr do turt,credit card blok kr do turt,cc_block_card,messy,0.982
+37,49,credit card band kardo yaar kho gya hai,cc band krdo yaar kho gya h,cc_block_card,messy,0.818
+38,50,mera card card chori ho gya block karo,mera crd card chori ho gya block karo,cc_block_card,messy,0.987
+39,52,card block krwana hai mera credit wala,card blck krwana h mera credit wala,cc_block_card,messy,0.959
+40,53,credit card band karo turant,credit card band karo turant,cc_block_card,messy,1.000
+41,55,card lost ho gaya mera credit wala,card gayab ho gaya mera credit wala,cc_block_card,adversarial,0.870
+42,56,kisi ne mera credit card use kar liya rok do,kisi ne mera cc use kar liya rok do,cc_block_card,adversarial,0.886
+43,57,credit card safe nahi hai band karo,credit card safe nahi hai band karo,cc_block_card,adversarial,1.000
+44,58,credit card pe fraud ho rha hai band karo,cc pe fraud ho rha h band kro,cc_block_card,adversarial,0.829
+45,59,mera plastic card rok do credit wala,mera plastic card rok do credit wala,cc_block_card,adversarial,1.000
+46,60,unblock my credit card,Unblock my credit card,cc_unblock_card,clean,1.000
+47,61,please reactivate my credit card,Please reactivate my credit card,cc_unblock_card,clean,1.000
+48,62,i want to unblock my blocked credit card,I want to unblock my blocked credit card,cc_unblock_card,clean,1.000
+49,63,credit card unblock kardo mera,cc unblock krdo mera,cc_unblock_card,messy,0.800
+50,64,credit card phir se chalu karo,credit card phir se chalu karo,cc_unblock_card,messy,1.000
+51,65,card reactivate karna hai credit wala,card reactivate krna h credit wala,cc_unblock_card,messy,0.958
+52,66,mera credit card block hai usko kholo,mera cc block h usko kholo,cc_unblock_card,messy,0.825
+53,67,credit card wapas chalu kardo,credit card wapas chalu krdo,cc_unblock_card,messy,0.982
+54,68,blocked credit card ko unblock karo please,blocked cc ko unblock karo plz,cc_unblock_card,messy,0.806
+55,69,credit card enable karo dobara,cc enable karo dobara,cc_unblock_card,messy,0.824
+56,70,credit card phir se use karna hai,credit card phir se use krna h,cc_unblock_card,adversarial,0.952
+57,71,mera credit card kaam nahi kr rha chalu karo,mera cc kaam nahi kr rha chalu karo,cc_unblock_card,adversarial,0.886
+58,72,card band tha ab kholo,card band tha ab kholo,cc_unblock_card,adversarial,1.000
+59,73,dobara activate karo credit card,dobara activate karo credit card,cc_unblock_card,adversarial,1.000
+60,74,credit card chalana hai wapas,cc chalana h wapas,cc_unblock_card,adversarial,0.766
+61,75,show my credit card statement,Show my credit card statement,cc_view_statement,clean,1.000
+62,76,i want to see my credit card bill,I want to see my credit card bill,cc_view_statement,clean,1.000
+63,77,display my credit card statement for this month,Display my CC statement for this month,cc_view_statement,clean,0.894
+64,78,credit card ka statemnt dikhao,cc ka statemnt dikhao,cc_view_statement,messy,0.824
+65,79,credit card ka bill kitna aaya,credit card ka bill kitna aaya,cc_view_statement,messy,1.000
+66,80,credit card bill dikhao zra pichle mahine ka,cc bill dikhao zra pichle mahine ka,cc_view_statement,messy,0.886
+67,81,credti card ka statemnt bhejo,credti card ka statemnt bhjo,cc_view_statement,messy,0.982
+68,82,credit card ka bill batao is month ka,cc ka bill btao is month ka,cc_view_statement,messy,0.844
+69,83,mera credit card statement chahiye,mera credit card statement chahiye,cc_view_statement,messy,1.000
+70,84,credit card ka hisab batao kitna kata,cc ka hisab btao kitna kata,cc_view_statement,messy,0.844
+71,85,credit card pe kitna kharch hua,credit card pe kitna kharch hua,cc_view_statement,adversarial,1.000
+72,86,credit card pe kya kya laga hai,cc pe kya kya laga hai,cc_view_statement,adversarial,0.830
+73,87,credit card ka lena dena batao,credit card ka lena dena btao,cc_view_statement,adversarial,0.983
+74,88,is mahine credit card pe kitna gaya,is mahine cc pe kitna gaya,cc_view_statement,adversarial,0.852
+75,89,mere credit card ka sara record dikhao,mere cc ka sara record dikhao,cc_view_statement,adversarial,0.866
+76,90,pay my credit card bill,Pay my credit card bill,cc_pay_bill,clean,1.000
+77,91,i want to pay my credit card outstanding amount,I want to pay my CC outstanding amount,cc_pay_bill,clean,0.894
+78,92,make payment for my credit card,Make payment for my credit card,cc_pay_bill,clean,1.000
+79,93,credit card ka bill pay karo,cc ka bill pay karo,cc_pay_bill,messy,0.809
+80,94,credit card ka paisa bharo,credit card ka paisa bharo,cc_pay_bill,messy,1.000
+81,95,credit card bill payment karna hai,cc bill payment krna h,cc_pay_bill,messy,0.786
+82,96,credit card ka outstanding bharo,credit card ka outstanding bharo,cc_pay_bill,messy,1.000
+83,97,credit card ka bill de do mera,cc ka bill de do mera,cc_pay_bill,messy,0.824
+84,98,credit card ka bkaya chuka do,credit card ka bkaya chuka do,cc_pay_bill,messy,1.000
+85,99,mera credit card ka dues pay kardo,mera cc ka dues pay krdo,cc_pay_bill,messy,0.828
+86,100,credit card ka paisa wapas karo,cc ka paisa wapas karo,cc_pay_bill,adversarial,0.830
+87,101,credit card ka hisab clear karo,credit card ka hisab clear karo,cc_pay_bill,adversarial,1.000
+88,102,credit card pe jo baki hai wo de do,cc pe jo baki h wo de do,cc_pay_bill,adversarial,0.814
+89,103,credit card ka outstanding utaaro,credit card ka karza utaaro,cc_pay_bill,adversarial,0.767
+90,104,credit card zero karo mera,cc zero karo mera,cc_pay_bill,adversarial,0.791
+91,105,increase my credit card limit,Increase my credit card limit,cc_limit_increase,clean,1.000
+92,106,i want a higher credit limit,I want a higher credit limit,cc_limit_increase,clean,1.000
+93,107,please raise my credit card spending limit,Please raise my credit card spending limit,cc_limit_increase,clean,1.000
+94,108,credit card ki limit badhao meri please,cc ki limit badhao meri plz,cc_limit_increase,messy,0.788
+95,109,credit limit increase chahiye 200000 ki,credit lmt increase chahye 2 lakh ki,cc_limit_increase,messy,0.827
+96,110,mera credit card limit badha do,mera cc limit badha do,cc_limit_increase,messy,0.830
+97,111,credit card ki limit kam pad rhi hai badhao,credit card ki limit kam pad rhi h badhao,cc_limit_increase,messy,0.976
+98,112,credit card ka limit zyada karo,cc ka limit zyada karo,cc_limit_increase,messy,0.830
+99,113,credit card pe aur limit chahiye,credit card pe aur limit chahiye,cc_limit_increase,messy,1.000
+100,114,limit increase kardo credit card ka,limit increase krdo cc ka,cc_limit_increase,messy,0.833
+101,115,credit card pe zyada kharcha karna hai limit badhao,cc pe zyada kharcha krna h limit badhao,cc_limit_increase,adversarial,0.867
+102,116,credit card chhota pad rha hai,credit card chhota pad rha h,cc_limit_increase,adversarial,0.966
+103,117,mera credit card se bada payment nahi ho rha,mera cc se bada payment nahi ho rha,cc_limit_increase,adversarial,0.886
+104,118,credit card limit itni kam kyun hai badhao,cc limit itni kam kyun h badhao,cc_limit_increase,adversarial,0.849
+105,119,zyada shopping karni hai credit card pe allow karo,zyada shopping krni h cc pe allow karo,cc_limit_increase,adversarial,0.864
+106,124,mera debit card kho gaya block karo,mera dbt card kho gaya block kro,dc_block_card,messy,0.955
+107,125,debit card bhi block kr do mera,dc bhi blok kr do mera,dc_block_card,messy,0.830
+108,126,debit card band krwao jldi,debit card band krwao jldi,dc_block_card,messy,1.000
+109,127,atm card block kr dijiye,atm card block kr dijiye,dc_block_card,messy,1.000
+110,128,mera debit card chori ho gya band karo,mera debit card chori ho gya band karo,dc_block_card,messy,1.000
+111,131,mera bank ka card kho gya jo atm mein daalte hai,mera bank ka card kho gya jo atm me daalte h,dc_block_card,adversarial,0.957
+112,132,debit card safe nahi hai ab,debit card safe nahi h ab,dc_block_card,adversarial,0.962
+113,133,mera wala card band karo jo paise nikalte hai,mera wala card band karo jo paise nikalte h,dc_block_card,adversarial,0.977
+114,134,paisa nikalne wala card rok do kisi ne chura liya,paisa nikalne wala card rok do kisi ne chura liya,dc_block_card,adversarial,1.000
+115,135,i need a replacement debit card,I need a replacement debit card,dc_replace_card,clean,1.000
+116,136,"my debit card is damaged, i need a new one","My debit card is damaged, I need a new one",dc_replace_card,clean,1.000
+117,137,please replace my debit card,Please replace my debit card,dc_replace_card,clean,1.000
+118,138,naya debit card chahiye mujhe,naya debit card chahiye mujhe,dc_replace_card,messy,1.000
+119,139,debit card replace kardo mera purana toot gya,dc replace krdo mera purana toot gya,dc_replace_card,messy,0.889
+120,140,debit card damaged hai naya do,debit card damaged h naya do,dc_replace_card,messy,0.966
+121,141,card replace karo mera debit wala,card replace karo mera debit wala,dc_replace_card,messy,1.000
+122,142,naya atm card bhejdo mera purana kharab hai,naya atm card bhejdo mera purana kharab h,dc_replace_card,messy,0.976
+123,143,debit card ki replacement chahiye,debit card ki replacement chahiye,dc_replace_card,messy,1.000
+124,144,mera debit card tut gya naya issue karo,mera dc tut gya naya issue kro,dc_replace_card,messy,0.870
+125,145,mera atm card kaam nahi kr rha naya dedo,mera atm card kaam nhi kr rha naya dedo,dc_replace_card,adversarial,0.987
+126,146,debit card expire ho gya ab kya,debit card expire ho gya ab kya,dc_replace_card,adversarial,1.000
+127,147,purana card chhodo naya do,purana card chhodo naya do,dc_replace_card,adversarial,1.000
+128,148,atm mein dalne wala card toot gya hai,atm me dalne wala card toot gya h,dc_replace_card,adversarial,0.943
+129,149,mera card damaged naya bhejo,mera card ghis gya naya bhejo,dc_replace_card,adversarial,0.772
+130,150,reset my debit card pin,Reset my debit card PIN,dc_reset_pin,clean,1.000
+131,151,"i forgot my atm pin, please reset it","I forgot my ATM PIN, please reset it",dc_reset_pin,clean,1.000
+132,152,change my debit card pin,Change my debit card PIN,dc_reset_pin,clean,1.000
+133,153,debit card ka pin reset karo,dc ka pin reset karo,dc_reset_pin,messy,0.833
+134,154,mera atm pin forgot change karo,mera atm pin bhool gya change kro,dc_reset_pin,messy,0.812
+135,155,debit card ka pin badal do,debit card ka pin badal do,dc_reset_pin,messy,1.000
+136,156,pin reset karna hai mera debit card ka,pin reset krna h mera dc ka,dc_reset_pin,messy,0.831
+137,157,atm pin change chahiye naya,atm pin change chahiye naya,dc_reset_pin,messy,1.000
+138,158,mera card ka pin yaad nahi reset kardo,mera card ka pin yaad nahi reset krdo,dc_reset_pin,messy,0.987
+139,159,debit card pin forgot naya set karo,dc pin bhool gya naya set kro,dc_reset_pin,messy,0.688
+140,160,atm mein pin galat ho gya,atm me pin galat ho gya,dc_reset_pin,adversarial,0.958
+141,161,mere card ka number yaad nahi jo atm mein daalte hai,mere card ka number yaad nahi jo atm me daalte h,dc_reset_pin,adversarial,0.960
+142,162,atm se paisa nahi nikl rha pin issue hai,atm se paisa nahi nikl rha pin issue h,dc_reset_pin,adversarial,0.974
+143,163,4 digit wala code forgot card ka,4 digit wala code bhool gya card ka,dc_reset_pin,adversarial,0.836
+144,164,card ka password change karna hai,card ka password change krna h,dc_reset_pin,adversarial,0.952
+145,165,what is my emi amount,What is my EMI amount,loan_emi_details,clean,1.000
+146,166,show mein my loan emi details,Show me my loan EMI details,loan_emi_details,clean,0.964
+147,167,how much is my monthly emi,How much is my monthly EMI,loan_emi_details,clean,1.000
+148,168,mera loan ka emi kitna bnta hai,mra loan ka emi kitna bnta h,loan_emi_details,messy,0.949
+149,169,emi ka amount batao next wala,emi ka amount btao next wala,loan_emi_details,messy,0.982
+150,170,loan ki kist kitni hai meri,loan ki kist kitni h meri,loan_emi_details,messy,0.962
+151,171,emi details batao loan ka,emi details btao loan ka,loan_emi_details,messy,0.980
+152,172,mahine ka emi kitna hai mera,mahine ka emi kitna h mera,loan_emi_details,messy,0.963
+153,173,loan ka monthly installment batao,loan ka monthly installment btao,loan_emi_details,messy,0.985
+154,174,meri emi kitni aati hai har mahine,meri emi kitni aati h har mahine,loan_emi_details,messy,0.970
+155,175,har mahine kitna dena padta hai,har mahine kitna dena padta h,loan_emi_details,adversarial,0.967
+156,176,mera monthly kharcha kitna hai bank ko,mera monthly kharcha kitna h bank ko,loan_emi_details,adversarial,0.973
+157,177,kist kitni hai meri,kist kitni h meri,loan_emi_details,adversarial,0.944
+158,178,loan ka bojh kitna hai mahine ka,loan ka bojh kitna h mahine ka,loan_emi_details,adversarial,0.968
+159,179,next payment kitna aayega,next payment kitna aayega,loan_emi_details,adversarial,1.000
+160,180,what is my loan outstanding amount,What is my loan outstanding amount,loan_outstanding,clean,1.000
+161,181,how much loan is remaining,How much loan is remaining,loan_outstanding,clean,1.000
+162,182,show my total loan balance,Show my total loan balance,loan_outstanding,clean,1.000
+163,183,loan kitna bcha hai abhi tk,loan kitna bcha h abhi tk,loan_outstanding,messy,0.962
+164,184,baki loan amount batao mera,baki loan amount btao mera,loan_outstanding,messy,0.981
+165,185,home loan ka outstanding kitna hai,home loan ka outstanding kitna h,loan_outstanding,messy,0.970
+166,186,mere loan mein kitna baki hai,mere loan me kitna baki h,loan_outstanding,messy,0.926
+167,187,loan ka remaining amount batao,loan ka remaining amount btao,loan_outstanding,messy,0.983
+168,188,abhi kitna loan chukana baki hai,abhi kitna loan chukana baki h,loan_outstanding,messy,0.968
+169,189,total loan kitna hai mera,total loan kitna h mera,loan_outstanding,messy,0.958
+170,190,abhi kitna dena hai total,abhi kitna dena h total,loan_outstanding,adversarial,0.958
+171,191,mera outstanding kitna reh gya,mera karza kitna reh gya,loan_outstanding,adversarial,0.741
+172,192,bank ko kitna dena hai abhi,bank ko kitna dena h abhi,loan_outstanding,adversarial,0.962
+173,193,loan kab khatam hoga kitna bcha,loan kab khatam hoga kitna bcha,loan_outstanding,adversarial,1.000
+174,194,principal kitna baki hai mere loan ka,principal kitna baki h mere loan ka,loan_outstanding,adversarial,0.972
+175,196,close my loan by paying full amount,Close my loan by paying full amount,loan_foreclosure,clean,1.000
+176,197,how to do loan foreclosure,How to do loan foreclosure,loan_foreclosure,clean,1.000
+177,199,loan band karo mera ek saath pay karke,loan band karo mera ek saath pay krke,loan_foreclosure,messy,0.987
+178,200,jldi se loan band krwana hai,jldi se loan band krwana h,loan_foreclosure,messy,0.963
+179,201,loan pura chuka ke band karo,loan pura chuka ke band karo,loan_foreclosure,messy,1.000
+180,202,foreclosure krwani hai loan ki,foreclosure krwani h loan ki,loan_foreclosure,messy,0.966
+181,203,poora loan ek baar mein bharna hai,poora loan ek baar me bharna h,loan_foreclosure,messy,0.938
+182,204,loan close karna hai full payment krke,loan close karna h full payment krke,loan_foreclosure,messy,0.973
+183,205,sab ek saath de deta hu khatam karo,sab ek saath de deta hu khatam karo,loan_foreclosure,adversarial,1.000
+184,206,loan se chutkara chahiye jldi,loan se chutkara chahiye jldi,loan_foreclosure,adversarial,1.000
+185,207,poora outstanding nipta do aaj hi,poora karza nipta do aaj hi,loan_foreclosure,adversarial,0.767
+186,208,loan ka scene khatam karo,loan ka scene khatam karo,loan_foreclosure,adversarial,1.000
+187,209,bank ka sab hisab saaf karo loan wala,bank ka sab hisab saaf karo loan wala,loan_foreclosure,adversarial,1.000
+188,210,transfer 5000 to rahul,Transfer 5000 to Rahul,pay_transfer,clean,1.000
+189,211,i want to send money to another account,I want to send money to another account,pay_transfer,clean,1.000
+190,212,make a fund transfer via neft,Make a fund transfer via NEFT,pay_transfer,clean,1.000
+191,213,5000 bhej do rahul ko yaar,5k bhj do rahul ko yaar,pay_transfer,messy,0.898
+192,214,paise transfer karne hai 10000 ajay ke account mein,paise transfer krne h 10k ajay ke ac me,pay_transfer,messy,0.844
+193,215,rupye bhejne hai bhai ko neft se,rupye bhejne h bhai ko neft se,pay_transfer,messy,0.968
+194,216,amir ko 2000 transfer kardo abhi,amir ko 2000 trf krdo abhi,pay_transfer,messy,0.897
+195,217,transfer karna hai 15000 savings se,trnsfr krna h 15000 savings se,pay_transfer,messy,0.923
+196,218,paisa bhej do mummy ke account mein,paisa bhej do mummy ke account me,pay_transfer,messy,0.971
+197,219,fund transfer karna hai 50000,fund transfer krna h 50k,pay_transfer,messy,0.868
+198,220,rahul ko de do paisa,rahul ko de do paisa,pay_transfer,adversarial,1.000
+199,221,dusre account mein daal do 5000,dusre account me daal do 5000,pay_transfer,adversarial,0.967
+200,222,bhai ka kaam karna hai paisa wala,bhai ka kaam karna h paisa wala,pay_transfer,adversarial,0.969
+201,223,kisi ko paise dene hai,kisi ko paise dene h,pay_transfer,adversarial,0.952
+202,224,amount move karo dusre account mein,amount move karo dusre account me,pay_transfer,adversarial,0.971
+203,225,send 500 via upi,Send 500 via UPI,upi_send,clean,1.000
+204,226,make a upi payment of 1000,Make a UPI payment of 1000,upi_send,clean,1.000
+205,227,pay 200 using upi to amit,Pay 200 using UPI to Amit,upi_send,clean,1.000
+206,228,upi se pese bhej do 500 rs,upi se pese bhj do 500 rs,upi_send,messy,0.980
+207,229,upi payment karni hai 1200 ki,upi payment krni h 1200 ki,upi_send,messy,0.945
+208,230,gopi ko upi se 800 bhejo,gopi ko upi se 800 bhejo,upi_send,messy,1.000
+209,231,upi se 2000 bhejdo yaar,upi se 2000 bhejdo yaar,upi_send,messy,1.000
+210,232,upi payment karo 500 amit ko,upi payment karo 500 amit ko,upi_send,messy,1.000
+211,233,upi se paisa transfer karo 1500,upi se paisa transfer kro 1500,upi_send,messy,0.984
+212,234,upay se bhej do 300 rs,upay se bhej do 300 rs,upi_send,messy,1.000
+213,235,phone pe se 500 bhejo,phone pe se 500 bhejo,upi_send,adversarial,1.000
+214,236,gpay se amit ko 1000 do,gpay se amit ko 1000 do,upi_send,adversarial,1.000
+215,237,scan karke paisa de do 200,scan karke paisa de do 200,upi_send,adversarial,1.000
+216,238,@upi id pe bhej do 500,@upi id pe bhej do 500,upi_send,adversarial,1.000
+217,239,online payment karo 800 amit ko phone se,online payment karo 800 amit ko phone se,upi_send,adversarial,1.000
+218,240,i want to report a fraud on my account,I want to report a fraud on my account,sec_report_fraud,clean,1.000
+219,241,report unauthorized transaction,Report unauthorized transaction,sec_report_fraud,clean,1.000
+220,242,someone made a fraudulent transaction on my account,Someone made a fraudulent transaction on my account,sec_report_fraud,clean,1.000
+221,243,froud ho gya hai mera account pe report karo,froud ho gya h mera ac pe report kro,sec_report_fraud,messy,0.900
+222,244,kisi ne mere account se paise nikal liye,kisi ne mere ac se paise nikal liye,sec_report_fraud,messy,0.933
+223,245,suspicous transaction dikhao rha hai mera account,suspicous txn dikha rha h mera ac,sec_report_fraud,messy,0.780
+224,246,fraud report karna hai mere account pe,fraud report krna h mere account pe,sec_report_fraud,messy,0.959
+225,247,unauthorized transaction hua hai mera,unauthorized transaction hua h mera,sec_report_fraud,messy,0.972
+226,248,mera paise kisi ne chura liye account se,mera paise kisi ne chura liye account se,sec_report_fraud,messy,1.000
+227,249,galat transaction ho gya hai mera account pe,galat transaction ho gya h mera ac pe,sec_report_fraud,messy,0.914
+228,250,kisi ne mera account hack kr liya,kisi ne mera account hack kr liya,sec_report_fraud,adversarial,1.000
+229,251,mere paise lost ho gye account se,mere paise gayab ho gye account se,sec_report_fraud,adversarial,0.866
+230,252,mujhe lagta hai kisi ne mere account mein haath daala,mujhe lagta h kisi ne mere account me haath daala,sec_report_fraud,adversarial,0.961
+231,253,ye transaction maine nahi ki,ye transaction maine nahi ki,sec_report_fraud,adversarial,1.000
+232,254,account mein gadbad hai paise kam ho gye bina kuch kiye,account me gadbad h paise kam ho gye bina kuch kiye,sec_report_fraud,adversarial,0.962
+233,255,tell mein about my loans,Tell me about my loans,loan_explore,clean,0.957
+234,256,what loan services are available,What loan services are available,loan_explore,clean,1.000
+235,257,show mein my loan details,Show me my loan details,loan_explore,clean,0.958
+236,258,loan ki jankari do mujhe,loan ki jankari do mujhe,loan_explore,messy,1.000
+237,259,loan ke baare mein batao,loan ke baare mein batao,loan_explore,messy,1.000
+238,260,mera loan ka kya scene hai,mera loan ka kya scene h,loan_explore,messy,0.960
+239,261,loan options kya hai mere,loan options kya hain mere,loan_explore,messy,0.980
+240,262,loan ke baare mein jaanna hai,loan ke baare me jaanna h,loan_explore,messy,0.926
+241,263,loan ki poori jankari please,loan ki poori jankari plz,loan_explore,messy,0.906
+242,264,mera loan ka overview dikhao,mera loan ka overview dikhao,loan_explore,messy,1.000
+243,265,loan ka scene kya hai mera,loan ka scene kya h mera,loan_explore,adversarial,0.960
+244,266,loan mein kya kya kr skte hai,loan me kya kya kr skte h,loan_explore,adversarial,0.926
+245,267,loan wala section dikhao,loan wala section dikhao,loan_explore,adversarial,1.000
+246,268,mere loans ki information de do sab,mere loans ki info de do sab,loan_explore,adversarial,0.889
+247,269,loan related kya kya hai,loan related kya kya hai,loan_explore,adversarial,1.000
+248,270,tell mein about my bank accounts,Tell me about my bank accounts,acc_explore,clean,0.968
+249,271,show mein my account details,Show me my account details,acc_explore,clean,0.963
+250,272,what can i do with my account,What can I do with my account,acc_explore,clean,1.000
+251,273,account ki jankari do meri,account ki jankari do meri,acc_explore,messy,1.000
+252,274,mere account ke baare mein batao,mere account ke baare mein btao,acc_explore,messy,0.984
+253,275,account ka kya scene hai mera,account ka kya scene h mera,acc_explore,messy,0.964
+254,276,account ki poori information chahiye,account ki poori info chahiye,acc_explore,messy,0.892
+255,277,account related kya kya kar sakte hai,account related kya kya kar sakte h,acc_explore,messy,0.972
+256,278,mera savings account dikhao,mera savings account dikhao,acc_explore,messy,1.000
+257,279,account ka overview dedo,account ka overview dedo,acc_explore,messy,1.000
+258,280,account mein kya kya available hai,account me kya kya available h,acc_explore,adversarial,0.938
+259,281,mera account dikhao pura,mera khata dikhao pura,acc_explore,adversarial,0.826
+260,282,account ka sab kuch batao,account ka sab kuch btao,acc_explore,adversarial,0.980
+261,283,mere account ki poori details do,mere account ki poori details do,acc_explore,adversarial,1.000
+262,284,account services batao kya kya hai,account services btao kya kya hai,acc_explore,adversarial,0.985
+263,285,tell mein about my debit card,Tell me about my debit card,dc_explore,clean,0.964
+264,286,show my debit card details,Show my debit card details,dc_explore,clean,1.000
+265,287,what services are available for my debit card,What services are available for my debit card,dc_explore,clean,1.000
+266,288,debit card ki jankari do,debit card ki jankari do,dc_explore,messy,1.000
+267,289,debit card ke baare mein batao,debit card ke baare mein batao,dc_explore,messy,1.000
+268,290,mera atm card ka kya scene hai,mera atm card ka kya scene h,dc_explore,messy,0.966
+269,291,debit card ki poori information chahiye mujhe,dc ki poori info chahiye mujhe,dc_explore,messy,0.800
+270,292,debit card ke options dikhao,debit card ke options dikhao,dc_explore,messy,1.000
+271,293,mera debit card ka overview do,mera debit card ka overview do,dc_explore,messy,1.000
+272,294,atm card related kya kya kr skte hai,atm card related kya kya kr skte h,dc_explore,messy,0.971
+273,295,debit card mein kya kya hai,debit card me kya kya hai,dc_explore,adversarial,0.962
+274,296,mera atm card wala section dikhao,mera atm card wala section dikhao,dc_explore,adversarial,1.000
+275,297,debit card ki sab jaankari de do,debit card ki sab jaankari de do,dc_explore,adversarial,1.000
+276,298,atm card ka kya kya kar sakte,atm card ka kya kya kar sakte,dc_explore,adversarial,1.000
+277,299,mera paisa nikalne wala card batao,mera paisa nikalne wala card btao,dc_explore,adversarial,0.985
+278,300,tell mein about my credit card,Tell me about my credit card,cc_explore,clean,0.966
+279,301,show my credit card information,Show my credit card information,cc_explore,clean,1.000
+280,302,what can i do with my credit card,What can I do with my credit card,cc_explore,clean,1.000
+281,303,credit card ki jankari do meri,credit card ki jankari do meri,cc_explore,messy,1.000
+282,304,credit card ke baare mein batao sab,cc ke baare mein btao sab,cc_explore,messy,0.833
+283,305,credit card ka scene kya hai mera,credit card ka scene kya hai mera,cc_explore,messy,1.000
+284,306,credit card ki poori information chahiye please,cc ki poori info chahiye plz,cc_explore,messy,0.720
+285,307,credit card ke options dikhao,credit card ke options dikhao,cc_explore,messy,1.000
+286,308,mera credit card ka overview de do,mera cc ka overview de do,cc_explore,messy,0.847
+287,309,credit card services kya kya hai,credit card services kya kya hain,cc_explore,messy,0.985
+288,310,credit card mein kya kya available hai batao,cc me kya kya available h batao,cc_explore,adversarial,0.827
+289,311,credit card ka sab kuch dikhao,credit card ka sab kuch dikhao,cc_explore,adversarial,1.000
+290,312,mere credit card ki information de do poori,mere credit card ki info de do poori,cc_explore,adversarial,0.911
+291,313,credit card related help chahiye,cc related help chahiye,cc_explore,adversarial,0.836
+292,314,mera plastic card batao credit wala,mera plastic card btao credit wala,cc_explore,adversarial,0.986
+293,315,tell mein more,Tell me more,st_continuation,clean,0.923
+294,316,what else can i do,What else can I do,st_continuation,clean,1.000
+295,317,show mein more options,Show me more options,st_continuation,clean,0.952
+296,318,aur batao,aur batao,st_continuation,messy,1.000
+297,319,aur kya kya hai,aur kya kya hai,st_continuation,messy,1.000
+298,320,aur bhi dikhao,aur bhi dikhao,st_continuation,messy,1.000
+299,321,aur options batao,aur options btao,st_continuation,messy,0.970
+300,322,thoda aur batao,thoda aur btao,st_continuation,messy,0.966
+301,323,aur bata do kuch,aur bta do kuch,st_continuation,messy,0.968
+302,324,aur information do please,aur info do plz,st_continuation,messy,0.700
+303,325,baaki kya hai,baaki kya hai,st_continuation,adversarial,1.000
+304,326,aur kuch,aur kuch,st_continuation,adversarial,1.000
+305,327,sab batao poora,sab batao poora,st_continuation,adversarial,1.000
+306,328,more please,more please,st_continuation,adversarial,1.000
+307,329,aur dikhao kya kya kr sakte,aur dikhao kya kya kr sakte,st_continuation,adversarial,1.000

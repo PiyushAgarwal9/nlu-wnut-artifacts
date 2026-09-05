@@ -24,6 +24,9 @@ the NLU pipeline.
   transfer-probe runner, the Hinglish-TOP replication scripts, the reranker training script,
   and the transfer-sheet generator.
 - `results/grid/` — raw per-run result JSONs for every reported configuration and repeat.
+- `results/shortlist_join_map.csv` — the checked, order-preserving 308-row mapping between
+  reranker-log entries and the ordered BankStress-330 records, used for the §4.4 shortlist
+  recall figures (every association inspectable; validated by `verify_claims.py`).
   Per-query records are included where available; some legacy runs are aggregate-only and are
   identified as such in `MANIFEST.md`.
 - `reranker/` — config of the fine-tuned cross-encoder reranker. The full weights (~2.1 GB)

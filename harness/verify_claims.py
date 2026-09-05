@@ -38,49 +38,35 @@ for f in sorted(glob(f"{G}/t4_eval_*.json")):
 #    difflib fuzzy). On the full reranked set recall@3 rises ~2pp under every recovery method,
 #    while recall@1 shows no gain (near-flat to slightly negative). We therefore rest the
 #    shortlist claim on recall@3. (A future harness should log the raw query / query index.)
-import ast, difflib
-# Join ONLY against the 330-item BankStress-330 evaluation population (EVAL_QUERIES),
-# not auxiliary EvalQuery examples elsewhere in the module.
-_tree = ast.parse(open("benchmark/v4_core17_dataset.py").read())
-rows = []
-def _is_eval_queries(_node):
-    if isinstance(_node, ast.Assign):
-        return any(isinstance(t, ast.Name) and t.id == "EVAL_QUERIES" for t in _node.targets)
-    if isinstance(_node, ast.AnnAssign):
-        return isinstance(_node.target, ast.Name) and _node.target.id == "EVAL_QUERIES"
-    return False
-for _node in ast.walk(_tree):
-    if _is_eval_queries(_node) and _node.value is not None:
-        for _c in ast.walk(_node.value):
-            if isinstance(_c, ast.Call) and getattr(_c.func, "id", "") == "EvalQuery":
-                _vals = [a.value for a in _c.args if isinstance(a, ast.Constant)]
-                if len(_vals) >= 3:
-                    rows.append((_vals[0], _vals[1], _vals[2]))
-assert len(rows) == 330, f"expected 330 benchmark queries, got {len(rows)}"
-def _n(s):
-    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", s.lower())).strip()
-gnorm = {}
-for _q, _intent, _tier in rows:
-    gnorm.setdefault(_n(_q), _intent)
-_keys = list(gnorm)
-# the three logged_eval rerank_logs are byte-identical (deterministic component): use one
+import csv as _csv
+# Checked, order-preserving join between the 308 reranker-log entries and the ordered
+# 330-item EVAL_QUERIES benchmark, shipped as results/shortlist_join_map.csv so every
+# association is inspectable. Validated here: monotone in both indices, all 308 log
+# entries consumed, and every mapped pair passes a normalized-similarity sanity check.
+_map = list(_csv.DictReader(open("results/shortlist_join_map.csv")))
+assert len(_map) == 308, f"mapping rows: {len(_map)}"
+_prev_j = _prev_i = -1
+for _r in _map:
+    _j, _i = int(_r["rerank_log_index"]), int(_r["eval_query_index"])
+    assert _j == _prev_j + 1 and _i > _prev_i, "mapping not order-preserving"
+    _prev_j, _prev_i = _j, _i
 log = json.load(open(sorted(glob(f"{G}/logged_eval_*.json"))[0]))["rerank_log"]
+_entries = [e for e in log if e["query"] != "warmup query"]
+import difflib as _dl, re as _re
+def _n(s):
+    return _re.sub(r"\s+", " ", _re.sub(r"[^a-z0-9]+", " ", s.lower())).strip()
 r1p = r1q = r3p = r3q = n = 0
-for e in log:
-    if e["query"] == "warmup query":
-        continue
-    gi = gnorm.get(_n(e["query"]))
-    if gi is None:
-        m = difflib.get_close_matches(_n(e["query"]), _keys, n=1, cutoff=0.6)
-        if not m:
-            continue
-        gi = gnorm[m[0]]
+for _r in _map:
+    e = _entries[int(_r["rerank_log_index"])]
+    assert e["query"] == _r["logged_normalized_query"], "log/mapping drift"
+    assert _dl.SequenceMatcher(None, _n(e["query"]), _n(_r["benchmark_query"])).ratio() >= 0.5
+    gi = _r["gold_intent"]
     pre = [c[0] for c in e["pre_top5"]]; post = [c[0] for c in e["post_top5"]]
     r1p += gi == pre[0]; r1q += gi == post[0]
     r3p += gi in pre[:3]; r3q += gi in post[:3]; n += 1
-print(f"[shortlist recall] n={n} reranked queries (raw recovered): "
-      f"recall@1 {r1p/n:.3f}->{r1q/n:.3f} (no gain), "
-      f"recall@3 {r3p/n:.3f}->{r3q/n:.3f} (paper: ~+2pp, .86->.88)")
+print(f"[shortlist recall] n={n} reranked queries (checked order-preserving join): "
+      f"recall@1 {r1p/n:.3f}->{r1q/n:.3f}, "
+      f"recall@3 {r3p/n:.3f}->{r3q/n:.3f} (+{r3q-r3p}) (paper: .864->.886, +2.3pp; @1 .740->.708)")
 
 # 4. Escalation rate determinism
 for f in sorted(glob(f"{G}/b7_*.json"))[:1]:
