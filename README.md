@@ -11,8 +11,10 @@ the NLU pipeline.
   intents classified against the full 163-intent space, stratified clean / messy /
   adversarial, with per-query authoring notes. All queries were authored by the sole
   author; none derive from real customer communications and no real PII appears anywhere.
-- `adjudication/` — the author-conducted label-audit sheet and the final record (38 majority-vote
-  failures; 35 gold_ok / 3 gold_wrong) referenced in §3 of the paper.
+- `adjudication/` — the author-conducted label-audit sheet and the final label-audit record
+  (38 majority-vote failures; 35 gold_ok / 3 gold_wrong) referenced in §3 of the paper.
+  Note: the `adjudication/` directory and filenames are legacy names; these files document a
+  sole-author label audit, not independent adjudication.
 - `transfer/` — the three native-speaker-validated transfer sets (§4.5): Tamil register T1,
   Tamil register T2 (Gen-Z), Telugu. Columns include the Hinglish original, machine
   candidates, and the reviewer-final query actually evaluated.
@@ -52,7 +54,7 @@ python3 harness/run_taen_transfer.py --csv transfer/tamil_t1_reviewed.csv --conf
 
 ## License
 
-Data (benchmark, transfer sets, adjudication record, result JSONs): CC BY 4.0.
+Data (benchmark, transfer sets, label-audit record, result JSONs): CC BY 4.0.
 Code (harness, training scripts): Apache 2.0.
 
 ## Data dictionary note
@@ -91,4 +93,4 @@ Hinglish-TOP dataset (google-research-datasets/Hinglish-TOP), licensed **Apache-
 records are redistributed under Apache-2.0, not under this bundle's CC BY 4.0 data license;
 see the Hinglish-TOP repository for the original license and attribution. The CC BY 4.0 grant
 in `LICENSE-DATA` covers only the author-created data (BankStress-330, transfer sets,
-adjudication record).
+label-audit record).
