@@ -1,16 +1,17 @@
-# Where Does Noise Robustness Live? — Artifacts (anonymized review copy)
+# Where Does Noise Robustness Live? — Artifacts (accompanying the final paper)
 
-Artifacts accompanying the W-NUT 2026 submission *"Where Does Noise Robustness Live?
-Evidence from Ablation, Role Swaps, and Cross-Lingual Transfer in Code-Mixed Banking NLU."*
-The system is referred to as the NLU (system name withheld) for anonymity.
+Artifact accompanying the final W-NUT 2026 paper *"Where Does Noise Robustness Live?
+Evidence from Ablation, Role Swaps, and Cross-Lingual Transfer in Code-Mixed Banking NLU"*
+by Piyush Agarwal (Independent Researcher, India). The system is referred to generically as
+the NLU pipeline.
 
 ## Contents
 
 - `benchmark/` — BankStress-330, the 330-query tiered benchmark (`v4_core17_dataset.py`): 22 core banking
   intents classified against the full 163-intent space, stratified clean / messy /
-  adversarial, with per-query authoring notes. All queries were authored by the research
-  team; none derive from real customer communications and no real PII appears anywhere.
-- `adjudication/` — the blind adjudication sheet and the final record (38 majority-vote
+  adversarial, with per-query authoring notes. All queries were authored by the sole
+  author; none derive from real customer communications and no real PII appears anywhere.
+- `adjudication/` — the author-conducted label-audit sheet and the final record (38 majority-vote
   failures; 35 gold_ok / 3 gold_wrong) referenced in §3 of the paper.
 - `transfer/` — the three native-speaker-validated transfer sets (§4.5): Tamil register T1,
   Tamil register T2 (Gen-Z), Telugu. Columns include the Hinglish original, machine
@@ -23,21 +24,24 @@ The system is referred to as the NLU (system name withheld) for anonymity.
 - `results/grid/` — raw per-run result JSONs for every reported configuration and repeat.
   Per-query records are included where available; some legacy runs are aggregate-only and are
   identified as such in `MANIFEST.md`.
-- `reranker/` — config of the fine-tuned cross-encoder reranker. Full weights (~2.1 GB)
-  are released at camera-ready (hosting exceeds anonymous-repository limits); the training
-  script and pair-construction recipe in `harness/train_xenc_reranker.py` reproduce them.
+- `reranker/` — config of the fine-tuned cross-encoder reranker. The full weights (~2.1 GB)
+  are not included in this bundle; the training script and pair-construction recipe in
+  `harness/train_xenc_reranker.py` reproduce them, and the released per-query rerank logs
+  suffice to verify every reranker claim without the weights.
 
 ## Reproducing
 
+This bundle is a **result-verification package**: it recomputes selected reported
+statistics from frozen per-query logs. It does not provide a fully self-contained
+end-to-end rerun of the complete pipeline; the pipeline source, prebuilt indices, and
+reranker weights are not part of the release. `python3 harness/verify_claims.py`
+recomputes the paper's nine selected headline statistics from the released per-query
+records with no pipeline dependency.
+
 The experiment runners (run_v4_eval.py, run_taen_transfer.py, run_htop.py) are **reference
-runners**: they require the pipeline source and prebuilt indices, released at camera-ready. Until
-then, `python3 harness/verify_claims.py` recomputes the paper's nine selected headline
-statistics from the
-released per-query records with no pipeline dependency.
-
-
-The harness runs against the pipeline codebase (released at camera-ready; the harness is
-pipeline-agnostic at the seams it ablates). Example invocations:
+runners** documenting exactly how each configuration was produced; they require the
+pipeline source and prebuilt indices and are not runnable from this bundle alone. Example
+invocations:
 
 ```
 python3 harness/run_v4_eval.py                          # baseline, 330 queries
