@@ -38,9 +38,25 @@ for f in sorted(glob(f"{G}/t4_eval_*.json")):
 #    difflib fuzzy). On the full reranked set recall@3 rises ~2pp under every recovery method,
 #    while recall@1 shows no gain (near-flat to slightly negative). We therefore rest the
 #    shortlist claim on recall@3. (A future harness should log the raw query / query index.)
-import difflib
-src = open("benchmark/v4_core17_dataset.py").read()
-rows = re.findall(r'EvalQuery\("((?:[^"\\]|\\.)*)",\s*"([^"]+)",\s*"([^"]+)"', src)
+import ast, difflib
+# Join ONLY against the 330-item BankStress-330 evaluation population (EVAL_QUERIES),
+# not auxiliary EvalQuery examples elsewhere in the module.
+_tree = ast.parse(open("benchmark/v4_core17_dataset.py").read())
+rows = []
+def _is_eval_queries(_node):
+    if isinstance(_node, ast.Assign):
+        return any(isinstance(t, ast.Name) and t.id == "EVAL_QUERIES" for t in _node.targets)
+    if isinstance(_node, ast.AnnAssign):
+        return isinstance(_node.target, ast.Name) and _node.target.id == "EVAL_QUERIES"
+    return False
+for _node in ast.walk(_tree):
+    if _is_eval_queries(_node) and _node.value is not None:
+        for _c in ast.walk(_node.value):
+            if isinstance(_c, ast.Call) and getattr(_c.func, "id", "") == "EvalQuery":
+                _vals = [a.value for a in _c.args if isinstance(a, ast.Constant)]
+                if len(_vals) >= 3:
+                    rows.append((_vals[0], _vals[1], _vals[2]))
+assert len(rows) == 330, f"expected 330 benchmark queries, got {len(rows)}"
 def _n(s):
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", s.lower())).strip()
 gnorm = {}
@@ -64,7 +80,7 @@ for e in log:
     r3p += gi in pre[:3]; r3q += gi in post[:3]; n += 1
 print(f"[shortlist recall] n={n} reranked queries (raw recovered): "
       f"recall@1 {r1p/n:.3f}->{r1q/n:.3f} (no gain), "
-      f"recall@3 {r3p/n:.3f}->{r3q/n:.3f} (paper: ~+2pp, .85->.88)")
+      f"recall@3 {r3p/n:.3f}->{r3q/n:.3f} (paper: ~+2pp, .86->.88)")
 
 # 4. Escalation rate determinism
 for f in sorted(glob(f"{G}/b7_*.json"))[:1]:

@@ -27,9 +27,11 @@ the NLU pipeline.
   Per-query records are included where available; some legacy runs are aggregate-only and are
   identified as such in `MANIFEST.md`.
 - `reranker/` — config of the fine-tuned cross-encoder reranker. The full weights (~2.1 GB)
-  are not included in this bundle; the training script and pair-construction recipe in
-  `harness/train_xenc_reranker.py` reproduce them, and the released per-query rerank logs
-  suffice to verify every reranker claim without the weights.
+  are not included in this bundle. The training script
+  `harness/train_xenc_reranker.py` documents the training procedure and pair-construction
+  recipe; regenerating the weights additionally requires the pipeline taxonomy/configuration
+  (`config/taxonomy_v4.yaml`), which is not included. The released per-query rerank logs
+  verify the reported reranker evaluation comparisons without the weights.
 
 ## Reproducing
 
